@@ -148,3 +148,4 @@ python manage.py collectstatic --noinput
  !     Push failed
 
 deploying to heroku
+corrected some mispellings, added DISABLE_COLLECTSTATIC to config vars on heroku (this may cause issues with static files but that will be address when needed)
