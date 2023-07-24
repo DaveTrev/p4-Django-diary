@@ -10,7 +10,7 @@ class diaryEntry(models.Model):
     learningOutcome = models.TextField(null=True, blank=True)
     activityType = models.TextField(null=True, blank=True)
     timeSpent = models.DecimalField(max_digits=4, decimal_places=2)
-    cpdCredits = models.DecimalField(max_digits=2, decimal_places=2)
+    cpdCredits = models.DecimalField(max_digits=4, decimal_places=2)
     practiceImpact = models.TextField(null=True, blank=True)
 
 
