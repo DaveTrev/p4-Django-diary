@@ -12,3 +12,5 @@ class DiaryList(ListView):
 
 class DiaryDetail(DetailView):
     model = diary_entry
+    context_object_name = 'entry'
+    
