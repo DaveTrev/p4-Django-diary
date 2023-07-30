@@ -1,9 +1,8 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-from django.template import loader
+from django.views.generic.list import ListView
+from .models import diary_entry
 # Create your views here.
 
 
-def index(request):
-    return HttpResponse('cpdiary')
-
+class DiaryList(ListView):
+    model = diary_entry

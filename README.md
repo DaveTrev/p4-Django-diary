@@ -7,6 +7,10 @@ TESTING.MD
 DESIGN / WIREFRAMES
 
 
+Use https://summernote.org/ for text editor for diary entry
+create about page with model / possible seperate app
+https://www.dennisivy.com/django-class-based-views
+
 
 first bug
 python manage.py collectstatic --noinput

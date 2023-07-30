@@ -1,6 +1,6 @@
 from django.urls import path
-from . import views
+from .views import DiaryList
 
 urlpatterns = [
-    path('', views.index, name="index"),
+    path('', DiaryList.as_view(), name="diary-entry"),
 ]

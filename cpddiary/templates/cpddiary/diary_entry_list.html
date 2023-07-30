@@ -1,0 +1,14 @@
+<h1>My CPD learning</h1>>
+
+<table>
+    <tr>
+        <th>Diary Entry</th>
+    </tr>
+    {% for diary_entry in object_list %}
+    <tr>
+        <th>{{diary_entry.title}}</th>
+    </tr>
+    {% empty %}
+        <h3>No items in list</h3>
+    {% endfor %}
+</table>
