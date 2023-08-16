@@ -33,7 +33,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = ["cpddiary-bd5599156530.herokuapp.com", 
-"8000-davetrev-p4djangodiary-8rojtdy8ldg.ws-eu102.gitpod.io",]
+                 "8000-davetrev-p4djangodiary-8rojtdy8ldg.ws-eu104.gitpod.io"]
 
 
 # Application definition
@@ -84,18 +84,16 @@ WSGI_APPLICATION = 'p4_django_diary.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-#DATABASES = {
+# DATABASES = {
 #    'default': {
 #        'ENGINE': 'django.db.backends.sqlite3',
 #        'NAME': BASE_DIR / 'db.sqlite3',
 #    }
-#}
+# }
 
 DATABASES = {
    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
-
-
 
 
 # Password validation

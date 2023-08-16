@@ -1,13 +1,13 @@
-<h1>My CPD learning</h1>>
+<h1>My CPD learning</h1>
 
 <table>
     <tr>
         <th>Diary Entry</th>
     </tr>
-    {% for diary_entry in entry %}
+    {% for diary in diary_entry %}
     <tr>
         <th>{{diary_entry.title}}</th>
-        <td><a href="{% url 'diary_entry_detail.html' entry.id %}">View</a></td>
+       # <td><a href="{% url 'diary_entry' entry_id=entry.id %}">Link text</a>>View</a></td>
     </tr>
     {% empty %}
         <h3>No items in list</h3>
