@@ -12,6 +12,11 @@ create about page with model / possible seperate app
 https://www.dennisivy.com/django-class-based-views
 https://www.dennisivy.com/django-class-based-views
 
+user stories
+i want to have a user arrive at the site, be given the choice to log in / register
+on the individual login, they can enter a diary entry
+that will save, and they can see their previous entrys
+
 first bug
 python manage.py collectstatic --noinput
        Traceback (most recent call last):

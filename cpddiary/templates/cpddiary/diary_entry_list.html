@@ -3,11 +3,12 @@
 <table>
     <tr>
         <th>Diary Entry</th>
+        <U>
     </tr>
-    {% for diary in diary_entry %}
+    {% for diary_entry in entry %}
     <tr>
         <th>{{diary_entry.title}}</th>
-       # <td><a href="{% url 'diary_entry' entry_id=entry.id %}">Link text</a>>View</a></td>
+       
     </tr>
     {% empty %}
         <h3>No items in list</h3>
