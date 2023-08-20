@@ -24,6 +24,8 @@ https://www.youtube.com/watch?v=llbtoQTt4qw
 build a personal diary with django
 https://realpython.com/django-diary-project-python/#step-2-adding-your-diary-entries-to-the-back-end
 
+working with forms 
+https://docs.djangoproject.com/en/3.1/topics/forms/#working-with-form-templates
 
 
 user stories
