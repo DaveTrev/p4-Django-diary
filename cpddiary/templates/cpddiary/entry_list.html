@@ -1,5 +1,6 @@
-<h1>My Continuing Professional Development Diary</h1>
+{% extends "cpddiary/base.html" %}
 
+{% block content %}
 {% for entry in entry_list %}
     <article>
         <h2 class="{{ entry.date|date:'l' }}">
@@ -12,3 +13,4 @@
         </h3>
     </article>
 {% endfor %}
+{% endblock %}
