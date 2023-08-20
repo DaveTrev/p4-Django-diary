@@ -1,0 +1,14 @@
+<h1>My Continuing Professional Development Diary</h1>
+
+{% for entry in entry_list %}
+    <article>
+        <h2 class="{{ entry.date|date:'l' }}">
+            {{ entry.date|date:'Y-m-d H:i' }}
+        </h2>
+        <h3>
+            <a href="{% url 'diary-detail' entry.id %}">
+                {{ entry.title }}
+            </a>
+        </h3>
+    </article>
+{% endfor %}

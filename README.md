@@ -1,3 +1,6 @@
+Continuing Professional Development Diary
+
+
 CLEARED BOILERPLATE README
 
 TODO
@@ -11,6 +14,17 @@ Use https://summernote.org/ for text editor for diary entry
 create about page with model / possible seperate app
 https://www.dennisivy.com/django-class-based-views
 https://www.dennisivy.com/django-class-based-views
+
+creating user registration, login and logout with django
+https://ordinarycoders.com/blog/article/django-user-register-login-logout
+
+dennis ivy django todo app
+https://www.youtube.com/watch?v=llbtoQTt4qw
+
+build a personal diary with django
+https://realpython.com/django-diary-project-python/#step-2-adding-your-diary-entries-to-the-back-end
+
+
 
 user stories
 i want to have a user arrive at the site, be given the choice to log in / register

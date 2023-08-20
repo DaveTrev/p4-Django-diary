@@ -1,7 +1,8 @@
 from django.urls import path
-from .views import DiaryList, DiaryDetail
+from .views import DiaryListView, DiaryDetailView
 
 urlpatterns = [
-    path('', DiaryList.as_view(), name="cpdlist"),
-    path('entry/<int:pk>/', DiaryDetail.as_view(), name='cpdlist'),
+    path('', DiaryListView.as_view(), name="diary-list"),
+    path('entry/<int:pk>/', DiaryDetailView.as_view(),
+         name='diary-detail'),
 ]

@@ -1,9 +1,10 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.utils import timezone
 # Create your models here.
 
 
-class diary_entry(models.Model):
+class Entry(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True,
                              blank=True)
     date = models.DateTimeField(auto_now_add=True)
@@ -19,4 +20,5 @@ class diary_entry(models.Model):
 
     class Meta:
         ordering = ['date']
+        verbose_name_plural = "Entries"
 
