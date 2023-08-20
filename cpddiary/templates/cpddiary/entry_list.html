@@ -1,16 +1,24 @@
 {% extends "cpddiary/base.html" %}
 
 {% block content %}
+
+<article>
+    <h2 class="mark">{% now "d-m-Y H:i" %}</em></h2>
+    <a href="{% url 'entry-create' %}"><button>Add a new diary entry</button></a>
+</article>
+
 {% for entry in entry_list %}
+
     <article>
         <h2 class="{{ entry.date|date:'l' }}">
             {{ entry.date|date:'Y-m-d H:i' }}
         </h2>
         <h3>
-            <a href="{% url 'diary-detail' entry.id %}">
+            <a href="{% url 'entry-detail' entry.id %}">
                 {{ entry.title }}
             </a>
         </h3>
     </article>
+
 {% endfor %}
 {% endblock %}

@@ -27,6 +27,9 @@ https://realpython.com/django-diary-project-python/#step-2-adding-your-diary-ent
 working with forms 
 https://docs.djangoproject.com/en/3.1/topics/forms/#working-with-form-templates
 
+mixin messages
+https://www.youtube.com/watch?v=pOXqvzVCeSM
+
 
 user stories
 i want to have a user arrive at the site, be given the choice to log in / register
