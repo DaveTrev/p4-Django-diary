@@ -7,7 +7,7 @@ from .views import (
     DiaryDeleteView)
 
 urlpatterns = [
-    path('', DiaryListView.as_view(), name="diary-list"),
+    path('', DiaryListView.as_view(), name="entry-list"),
     path('entry/<int:pk>/',
          DiaryDetailView.as_view(),
          name='entry-detail'),

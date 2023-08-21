@@ -37,8 +37,7 @@ class DiaryUpdateView(SuccessMessageMixin, UpdateView):
 
     def get_success_url(self):
         return reverse_lazy(
-            "entry-detail",
-            kwargs={"pk": self.entry.id}
+            "entry-list",
         )
 
 
