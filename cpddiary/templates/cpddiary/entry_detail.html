@@ -1,11 +1,15 @@
 {% extends "cpddiary/base.html" %}
 
 {% block content %}
+
+<!-- time displaying incorrectly one hour behind local time in Dublin -->
 <article>
     <h2>{{ entry.title }}</h2>
     <h3>Date: </h3> <h3>{{ entry.date|date:'d-m-Y H:i' }}</h3>
-    <h3>Cpd credits: </h3><h3>{{ entry.cpdCredits }}</h3>
+    <h3>Cpd credits: </h3><h3>{{ entry.cpdCredits }}</h3> 
+    <!-- CPD credits values need to be changed to whole numbers or add text to advise, time = credits -->
     <h3>Time Spent: </h3><h3>{{ entry.timeSpent }}</h3>
+    <!-- Time spent, possible need to change numeric display to minutes for ease of use for user -->
     <h3>Learning Outcome: </h3><p>{{ entry.learningOutcome }}</p>
     <h3>Type of learning activity: </h3><p>{{ entry.activityType }}</p>
     <h3>Impact on practice: </h3><p>{{ entry.practiceImpact }}</p>

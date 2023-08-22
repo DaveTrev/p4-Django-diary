@@ -2,6 +2,8 @@
 
 {% block content %}
 
+<p>{{ request.user }}</p>
+
 <article>
     <h2 class="mark">{% now "d-m-Y H:i" %}</em></h2>
     <a href="{% url 'entry-create' %}"><button>Add a new diary entry</button></a>
