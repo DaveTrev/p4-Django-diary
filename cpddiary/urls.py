@@ -8,7 +8,7 @@ from .views import (
     CpdLoginView,)
 
 urlpatterns = [
-    path('login/', CpdLoginView.as_view(), name="entry-list"),
+    path('login/', CpdLoginView.as_view(), name="login"),
     path('', DiaryListView.as_view(), name="entry-list"),
     path('entry/<int:pk>/',
          DiaryDetailView.as_view(),
