@@ -31,7 +31,7 @@
                 <li class="nav-item">
                     <a class="nav-link active text-white" aria-current="page" href="{% url 'entry-list' %}">Home</a>
                 </li>
-                {% if user.is_authenticated %}
+                {% if request.user.is_authenticated %}
                 <li class="nav-item">
                     <a class="nav-link text-white" href="">Logout</a>
                 </li>
@@ -55,6 +55,7 @@
 
 <!-- possible link to coru and about page on logging cpd to be added -->
 <!-- Add forms / cards to better display diary entrys -->
+<h1 class="nav-link text-black">Welcome {{request.user}}</h1>
     {% if messages %}
         <ul class="messages">
             {% for message in messages %}
@@ -69,7 +70,7 @@
 
 <!-- JS script for timing messages to user goes here! -->
 <!-- Bootstrap Footer goes here! Taken from codestar blog-->
-<footer class="footer mx-auto py-3 fixed-bottom " style="background-color: #3474a1;">
+<footer class="footer h-5 mx-auto py-0.5 fixed-bottom " style="background-color: #3474a1;">
     <p class="m-0 text-center text-white">Made by DaveTrev</p>
     <p class="m-0 text-center text-white">Follow us: <i class="fab fa-facebook-square ms-3"></i>
         <i class="fab fa-twitter-square ms-3"></i>       <!-- create links to socials -->

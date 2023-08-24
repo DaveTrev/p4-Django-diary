@@ -1,8 +1,6 @@
 from django.shortcuts import render
-from django.urls import reverse_lazy
 from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
-from .models import Entry
 from django.views.generic import (
     ListView,
     DetailView,
@@ -10,6 +8,17 @@ from django.views.generic import (
     UpdateView,
     DeleteView,
 )
+from django.urls import reverse_lazy
+from django.contrib.auth.views import LoginView
+from .models import Entry
+
+
+class CpdLoginView(LoginView):
+    template_name = 'cpddiary/login.html'
+    redirect_authenticated_user = True
+
+    def get_success_url(self):
+        return reverse_lazy("entry-list")
 
 
 class DiaryListView(ListView):

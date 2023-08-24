@@ -4,9 +4,11 @@ from .views import (
     DiaryDetailView,
     DiaryCreateView,
     DiaryUpdateView,
-    DiaryDeleteView)
+    DiaryDeleteView,
+    CpdLoginView,)
 
 urlpatterns = [
+    path('login/', CpdLoginView.as_view(), name="entry-list"),
     path('', DiaryListView.as_view(), name="entry-list"),
     path('entry/<int:pk>/',
          DiaryDetailView.as_view(),
