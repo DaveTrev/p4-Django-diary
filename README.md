@@ -30,6 +30,12 @@ https://docs.djangoproject.com/en/3.1/topics/forms/#working-with-form-templates
 mixin messages
 https://www.youtube.com/watch?v=pOXqvzVCeSM
 
+getbootstrap
+https://getbootstrap.com/
+
+bootstrap cheat sheet
+https://getbootstrap.com/docs/5.0/examples/cheatsheet/
+
 
 user stories
 i want to have a user arrive at the site, be given the choice to log in / register
