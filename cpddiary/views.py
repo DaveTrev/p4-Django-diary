@@ -10,6 +10,8 @@ from django.views.generic import (
 )
 from django.urls import reverse_lazy
 from django.contrib.auth.views import LoginView
+from django.contrib.auth.mixins import LoginRequiredMixin
+
 from .models import Entry
 
 
@@ -21,16 +23,16 @@ class CpdLoginView(LoginView):
         return reverse_lazy("entry-list")
 
 
-class DiaryListView(ListView):
+class DiaryListView(LoginRequiredMixin, ListView):
     model = Entry
     queryset = Entry.objects.all().order_by("-date")
 
 
-class DiaryDetailView(DetailView):
+class DiaryDetailView(LoginRequiredMixin, DetailView):
     model = Entry
 
 
-class DiaryCreateView(SuccessMessageMixin, CreateView):
+class DiaryCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     model = Entry
     fields = ["title", "learningOutcome", "activityType", "timeSpent",
               "cpdCredits", "practiceImpact"]
@@ -38,7 +40,7 @@ class DiaryCreateView(SuccessMessageMixin, CreateView):
     success_message = "Your new CPD diary entry was created!"
 
 
-class DiaryUpdateView(SuccessMessageMixin, UpdateView):
+class DiaryUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = Entry
     fields = ["title", "learningOutcome", "activityType", "timeSpent",
               "cpdCredits", "practiceImpact"]
@@ -50,7 +52,7 @@ class DiaryUpdateView(SuccessMessageMixin, UpdateView):
         )
 
 
-class DiaryDeleteView(DeleteView):
+class DiaryDeleteView(LoginRequiredMixin, DeleteView):
     model = Entry
     success_url = reverse_lazy("entry-list")
     success_message = "Your diary entry was deleted!"
