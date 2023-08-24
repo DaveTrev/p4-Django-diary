@@ -33,7 +33,7 @@
                 </li>
                 {% if request.user.is_authenticated %}
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="">Logout</a>
+                    <a class="nav-link text-white" href="{% url 'logout' %}">Logout</a>
                 </li>
                 {% else %}
                 <li class="nav-item">

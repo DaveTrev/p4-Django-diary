@@ -10,6 +10,8 @@ TESTING.MD
 DESIGN / WIREFRAMES
 
 
+django 3.2 
+
 Use https://summernote.org/ for text editor for diary entry
 create about page with model / possible seperate app
 https://www.dennisivy.com/django-class-based-views
