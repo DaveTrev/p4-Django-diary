@@ -41,10 +41,17 @@ https://getbootstrap.com/docs/5.0/examples/cheatsheet/
 https://docs.djangoproject.com/en/3.2/ref/class-based-views/mixins-single-object/#django.views.generic.detail.SingleObjectMixin.get_context_data
 
 https://stackoverflow.com/questions/70749958/user-specific-page-in-todo-list
+https://stackoverflow.com/questions/46846198/django-class-based-view-with-get-queryset
+https://medium.com/@hassanraza/when-to-use-get-get-queryset-get-context-data-in-django-952df6be036a#:~:text=get_context_data(),to%20display%20in%20your%20templates.
+https://rasulkireev.com/django-get-context-data/
+https://stackoverflow.com/questions/49027544/how-to-properly-use-get-context-data-with-listview-to-fetch-related-instances-in
 
 class based views - dennis ivy
 https://www.dennisivy.com/django-class-based-views
 
+https://www.valentinog.com/blog/get-context-data/
+
+https://djangoforbeginners.com/
 
 
 user stories

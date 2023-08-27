@@ -25,7 +25,8 @@ class CpdLoginView(LoginView):
 class DiaryListView(LoginRequiredMixin, ListView):
     model = Entry
     queryset = Entry.objects.all().order_by("-date")
-
+    template_name = 'entry_list.html'
+    
 
 class DiaryDetailView(LoginRequiredMixin, DetailView):
     model = Entry
