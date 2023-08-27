@@ -38,6 +38,14 @@ https://getbootstrap.com/
 bootstrap cheat sheet
 https://getbootstrap.com/docs/5.0/examples/cheatsheet/
 
+https://docs.djangoproject.com/en/3.2/ref/class-based-views/mixins-single-object/#django.views.generic.detail.SingleObjectMixin.get_context_data
+
+https://stackoverflow.com/questions/70749958/user-specific-page-in-todo-list
+
+class based views - dennis ivy
+https://www.dennisivy.com/django-class-based-views
+
+
 
 user stories
 i want to have a user arrive at the site, be given the choice to log in / register

@@ -19,6 +19,8 @@
                 {{ entry.title }}
             </a>
         </h3>
+        {% empty %}
+        <h3>No Entries in Diary</h3>
     </article>
 
 {% endfor %}
