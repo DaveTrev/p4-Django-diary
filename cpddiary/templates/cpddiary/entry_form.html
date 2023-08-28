@@ -1,7 +1,9 @@
 {% extends "cpddiary/base.html" %}
 
 {% block content %}
-    <form method="post">
+<h3>Cpd Entry</h3>
+<a href="{% {% url 'entry-list' %} %}">Go Back</a>
+    <form method="POST" action="">
         {% csrf_token %}
         {{ form.as_p }}
         <input type="submit" value="Save">
