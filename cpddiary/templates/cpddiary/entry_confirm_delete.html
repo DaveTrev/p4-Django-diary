@@ -1,6 +1,7 @@
 {% extends "cpddiary/base.html" %}
 
 {% block content %}
+<a href="{% url 'entry-list' %}">Go Back</a>
 <!-- Bootstrap form goes here! -->
     <form method="post">{% csrf_token %}
         <p>
