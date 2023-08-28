@@ -2,7 +2,7 @@
 
 {% block content %}
 <h3>Cpd Entry</h3>
-<a href="{% {% url 'entry-list' %} %}">Go Back</a>
+<a href="{% url 'entry-list' %}">Go Back</a>
     <form method="POST" action="">
         {% csrf_token %}
         {{ form.as_p }}
