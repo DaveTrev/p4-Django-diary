@@ -8,20 +8,20 @@
     <a href="{% url 'entry-create' %}"><button>Add a new diary entry</button></a>
 </article>
 
-{% for entry in entry_list %}
 
-    <article>
-        <h2 class="{{ entry.date|date:'l' }}">
-            {{ entry.date|date:'Y-m-d H:i' }}
-        </h2>
-        <h3>
-            <a href="{% url 'entry-detail' entry.id %}">
-                {{ entry.title }}
-            </a>
-        </h3>
-        {% empty %}
-        <h3>No Entries in Diary</h3>
-    </article>
+{% for entry in entries %}
+<article>
+    <h2 class="{{ entry.date|date:'l' }}">
+        {{ entry.date|date:'Y-m-d H:i' }}
+    </h2>
+    <h3>
+        <a href="{% url 'entry-detail' entry.id %}">
+            {{ entry.title }}
+        </a>
+    </h3>
+    {% empty %}
+    <h3>No Entries in Cpd Diary</h3>
+</article>
 
 {% endfor %}
 

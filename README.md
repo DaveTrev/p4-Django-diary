@@ -44,7 +44,7 @@ https://stackoverflow.com/questions/70749958/user-specific-page-in-todo-list
 https://stackoverflow.com/questions/46846198/django-class-based-view-with-get-queryset
 https://medium.com/@hassanraza/when-to-use-get-get-queryset-get-context-data-in-django-952df6be036a#:~:text=get_context_data(),to%20display%20in%20your%20templates.
 https://rasulkireev.com/django-get-context-data/
-https://stackoverflow.com/questions/49027544/how-to-properly-use-get-context-data-with-listview-to-fetch-related-instances-in
+https://stackoverflow.com/questions/49027544/how-to-properly-use-get-context-data-with-listview-to-fetch-related-instances-init 
 
 class based views - dennis ivy
 https://www.dennisivy.com/django-class-based-views
@@ -100,3 +100,25 @@ python manage.py collectstatic --noinput
 
 deploying to heroku
 corrected some mispellings, added DISABLE_COLLECTSTATIC to config vars on heroku (this may cause issues with static files but that will be address when needed)
+
+
+trying to restrict users viewing other users entries
+    #def get_context_data(self, **kwargs):
+        #data = super().get_context_data(**kwargs)
+
+        #if self.request.user.is_authenticated:
+            #data['user_posts'] = Entry.object.filter(user_id=self.request.user.id)
+
+        #return data
+
+    #def get_queryset(self):
+        #return Entry.objects.filter(user_id=self.request.user.id)
+
+       def get_queryset(self):
+        return Entry.objects.filter(user=self.request.user)
+
+    #def get_context_data(self, **kwargs):
+        #context = super().get_context_data(**kwargs)
+        #context['entry_list'] = context['entry_list'].filter(user=self.request.user)
+        #context["entry"] = Entry.objects.all()
+        #return context
