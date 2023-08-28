@@ -10,6 +10,9 @@ TESTING.MD
 DESIGN / WIREFRAMES
 
 
+FIX NEGATIVE NUMBERS IN TIME SPENT AND CPD POints!!
+
+
 django 3.2 
 
 Use https://summernote.org/ for text editor for diary entry

@@ -16,7 +16,7 @@ urlpatterns = [
     path('entry/<int:pk>/',
          DiaryDetailView.as_view(),
          name='entry-detail'),
-    path("create",
+    path("create/",
          DiaryCreateView.as_view(),
          name='entry-create'),
     path("entry/<int:pk>/update",
