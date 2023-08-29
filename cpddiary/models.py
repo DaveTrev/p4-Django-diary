@@ -1,7 +1,12 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
-# Create your models here.
+from django.core.exceptions import ValidationError
+
+
+def validate_positive_decimal(value):
+    if value < 0.5:
+        raise ValidationError("Value must be greater than or equal to 0.5")
 
 
 class Entry(models.Model):
@@ -11,8 +16,10 @@ class Entry(models.Model):
     title = models.CharField(max_length=200)
     learningOutcome = models.TextField(null=True, blank=True)
     activityType = models.TextField(null=True, blank=True)
-    timeSpent = models.DecimalField(max_digits=4, decimal_places=2)
-    cpdCredits = models.DecimalField(max_digits=4, decimal_places=2)
+    timeSpent = models.DecimalField(max_digits=4, decimal_places=2,
+                                    validators=[validate_positive_decimal])
+    cpdCredits = models.DecimalField(max_digits=4, decimal_places=2,
+                                     validators=[validate_positive_decimal])
     practiceImpact = models.TextField(null=True, blank=True)
 
     def __str__(self):
