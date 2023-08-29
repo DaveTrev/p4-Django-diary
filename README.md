@@ -13,6 +13,10 @@ DESIGN / WIREFRAMES
 FIX NEGATIVE NUMBERS IN TIME SPENT AND CPD POints!!
 
 
+add all auth instead of from django.contrib.auth.views import LoginView
+https://django-allauth.readthedocs.io/en/latest/
+
+
 django 3.2 
 
 Use https://summernote.org/ for text editor for diary entry
