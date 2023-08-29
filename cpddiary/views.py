@@ -15,6 +15,10 @@ from .models import Entry
 
 
 class CpdLoginView(LoginView):
+    """
+    This creates the login view, 
+    redirecting authenicated users to "entry-list"
+    """
     template_name = 'cpddiary/login.html'
     redirect_authenticated_user = True
 
