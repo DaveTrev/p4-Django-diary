@@ -60,6 +60,7 @@ https://www.valentinog.com/blog/get-context-data/
 
 https://djangoforbeginners.com/
 
+Code Institute - codestar blog / I think therefore I blog lessons
 
 user stories
 i want to have a user arrive at the site, be given the choice to log in / register
@@ -106,7 +107,7 @@ python manage.py collectstatic --noinput
  !     Push failed
 
 deploying to heroku
-corrected some mispellings, added DISABLE_COLLECTSTATIC to config vars on heroku (this may cause issues with static files but that will be address when needed)
+corrected some mispellings, added DISABLE_COLLECTSTATIC to config vars on heroku (this may cause issues with static files but that will be addressed when needed)
 
 
 trying to restrict users viewing other users entries
