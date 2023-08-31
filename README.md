@@ -130,3 +130,9 @@ trying to restrict users viewing other users entries
         #context['entry_list'] = context['entry_list'].filter(user=self.request.user)
         #context["entry"] = Entry.objects.all()
         #return context
+
+
+
+
+login = 'login' caused rooting issues
+{% extends base.html %} not working 

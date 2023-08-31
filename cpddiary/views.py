@@ -23,6 +23,15 @@ class DiaryListView(LoginRequiredMixin, ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['entries'] = context['entries'].filter(user=self.request.user)
+
+        search_bar = self.request.GET.get('search-page') or ''
+        if search_bar:
+            context['entries'] = context['entries'].filter(
+                title__icontains=search_bar)
+                #possible change to search bar needed, how to refresh in real time
+        #https://stackoverflow.com/questions/61446467/how-to-make-a-search-bar-that-refresh-everytime-the-user-input-something
+
+        context['search_bar'] = search_bar
         return context
 
 
