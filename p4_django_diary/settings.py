@@ -56,6 +56,7 @@ INSTALLED_APPS = [
 
 SITE_ID = 1
 
+LOGIN = 'accounts/login'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
@@ -138,7 +139,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-LOGIN_URL = 'login'
 
 
 # Static files (CSS, JavaScript, Images)

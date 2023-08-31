@@ -5,13 +5,11 @@ from .views import (
     DiaryCreateView,
     DiaryUpdateView,
     DiaryDeleteView,
-    CpdLoginView,)
+    )
 from django.contrib.auth.views import LogoutView
 
 
 urlpatterns = [
-    path('login/', CpdLoginView.as_view(), name="login"),
-    path('logout/', LogoutView.as_view(next_page="login"), name="logout"),
     path('', DiaryListView.as_view(), name="entry-list"),
     path('entry/<int:pk>/',
          DiaryDetailView.as_view(),

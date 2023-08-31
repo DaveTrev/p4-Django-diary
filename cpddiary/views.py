@@ -14,18 +14,6 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Entry
 
 
-class CpdLoginView(LoginView):
-    """
-    This creates the login view, 
-    redirecting authenicated users to "entry-list"
-    """
-    template_name = 'cpddiary/login.html'
-    redirect_authenticated_user = True
-
-    def get_success_url(self):
-        return reverse_lazy("entry-list")
-
-
 class DiaryListView(LoginRequiredMixin, ListView):
     model = Entry
     queryset = Entry.objects.all().order_by("-date")
