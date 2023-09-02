@@ -283,3 +283,13 @@ When we use the allauth roots in our project, if allauth can't find the template
 
 installed allauth, downloaded templates
 extending base 
+
+
+
+
+
+CORU LINKS ON CPD 
+https://www.coru.ie/health-and-social-care-professionals/education/continuing-professional-development/cpd-audit/
+https://www.coru.ie/health-and-social-care-professionals/education/continuing-professional-development/cpd-faqs/
+https://www.coru.ie/files-education/cpd/orb-guidance-on-continuing-professional-development.pdf
+https://www.coru.ie/files-education/cpd/orb-support-for-continuing-professional-development.pdf
