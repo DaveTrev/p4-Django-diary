@@ -21,9 +21,8 @@ class Entry(models.Model):
                                        verbose_name="Learning Outcome")
     activityType = models.TextField(null=True, blank=False,
                                     verbose_name="Activity Type")
-    timeSpent = models.DecimalField(verbose_name="Time Spent",
-                                    max_digits=4, decimal_places=2,
-                                    validators=[validate_positive_decimal])
+    timeSpent = models.CharField(max_length=20, verbose_name="Time Spent",
+                                 null=True, blank=False,)
     cpdCredits = models.DecimalField(verbose_name="Cpd Credits Claimed",
                                      max_digits=4, decimal_places=2,
                                      validators=[validate_positive_decimal])

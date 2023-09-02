@@ -11,6 +11,9 @@ class EntryForm(forms.ModelForm):
             'title': {
                 'required': 'Please enter a title.'
             },
+            'timeSpent': {
+                'required': 'Please enter the amount of time spent.'
+            },
             'learningOutcome': {
                 'required': 'Please enter details of your learning outcome.'
             },
@@ -20,4 +23,8 @@ class EntryForm(forms.ModelForm):
             'practiceImpact': {
                 'required': 'Please enter the impact on your practice.'
             },
+        }
+        widgets = {
+            'timeSpent': forms.Textarea(attrs={'placeholder': 'e.g. 3 hours',
+                                               'rows': 1, 'cols': 2})
         }
