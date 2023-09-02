@@ -38,6 +38,9 @@ https://www.youtube.com/watch?v=llbtoQTt4qw
 build a personal diary with django
 https://realpython.com/django-diary-project-python/#step-2-adding-your-diary-entries-to-the-back-end
 
+crud
+https://www.geeksforgeeks.org/django-crud-create-retrieve-update-delete-function-based-views/?ref=lbp
+
 working with forms 
 https://docs.djangoproject.com/en/3.1/topics/forms/#working-with-form-templates
 
@@ -70,6 +73,7 @@ https://djangoforbeginners.com/
 
 DEFENSIVE DESIGN
 https://forum.djangoproject.com/t/how-to-restrict-django-staff-user-to-edit-or-delete-others-staff-user-post-from-admin-panel/7887/5
+https://stackoverflow.com/questions/72980454/defensive-programming-for-delete-function-in-views-django
 
 Code Institute - codestar blog / I think therefore I blog lessons
 
@@ -284,7 +288,10 @@ When we use the allauth roots in our project, if allauth can't find the template
 installed allauth, downloaded templates
 extending base 
 
-
+removed validate positive decimal
+migrations failed due to missing validate positive decimal function
+removed validators=[cpddiary.models.validate_positive_decimal] from timeSpent and cpdCredits migration file 7
+reinstated code, as could not migrate, to return to this bug!! 
 
 
 

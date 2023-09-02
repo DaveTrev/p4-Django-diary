@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
 from django.core.exceptions import ValidationError
+from django.core.validators import MinValueValidator
 
 
 def validate_positive_decimal(value):
@@ -25,7 +26,7 @@ class Entry(models.Model):
                                  null=True, blank=False,)
     cpdCredits = models.DecimalField(verbose_name="Cpd Credits Claimed",
                                      max_digits=4, decimal_places=2,
-                                     validators=[validate_positive_decimal])
+                                     validators=[MinValueValidator(0)])
     practiceImpact = models.TextField(null=True, blank=False,
                                       verbose_name="Practice Impact")
 
