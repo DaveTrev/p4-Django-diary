@@ -12,6 +12,7 @@ from django.urls import reverse_lazy
 from django.contrib.auth.views import LoginView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Entry
+from .forms import EntryForm
 
 
 class DiaryListView(LoginRequiredMixin, ListView):
@@ -28,8 +29,8 @@ class DiaryListView(LoginRequiredMixin, ListView):
         if search_bar:
             context['entries'] = context['entries'].filter(
                 title__icontains=search_bar)
-                #possible change to search bar needed, how to refresh in real time
-        #https://stackoverflow.com/questions/61446467/how-to-make-a-search-bar-that-refresh-everytime-the-user-input-something
+# possible change to search bar needed, how to refresh in real time
+# https://stackoverflow.com/questions/61446467/how-to-make-a-search-bar-that-refresh-everytime-the-user-input-something
 
         context['search_bar'] = search_bar
         return context
@@ -41,8 +42,7 @@ class DiaryDetailView(LoginRequiredMixin, DetailView):
 
 class DiaryCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     model = Entry
-    fields = ["title", "learningOutcome", "activityType", "timeSpent",
-              "cpdCredits", "practiceImpact"]
+    form_class = EntryForm
     success_url = reverse_lazy("entry-list")
     success_message = "Your new CPD diary entry was created!"
     # Success message may need JS script to set time
