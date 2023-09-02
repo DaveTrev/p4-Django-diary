@@ -4,10 +4,15 @@ Continuing Professional Development Diary
 CLEARED BOILERPLATE README
 
 TODO
-ADD PLANNING / AGILE
-ERD DIAGRAM
-TESTING.MD
-DESIGN / WIREFRAMES
+ADD PLANNING / AGILE - done
+ERD DIAGRAM - todo-
+TESTING.MD - todo
+DESIGN / WIREFRAMES - done but need to add to repo
+
+bootstrap for mbile!
+TIMEBOX doesnt indicate measurement of time!! minutes or hours?
+CPD points box, adjust to whole numbers and halfs
+FOOTER covers cancel box ant bottom of page
 
 
 FIX NEGATIVE NUMBERS IN TIME SPENT AND CPD POints!!
