@@ -56,6 +56,10 @@
 
 <!-- possible link to coru and about page on logging cpd to be added -->
 <!-- Add forms / cards to better display diary entrys -->
+<div class="container">
+    <div class="row">
+      <div class="col-md-8 mt-3 offset-md-2">
+
 <h1 class="nav-link text-black">Welcome {{request.user}}</h1>
     {% if messages %}
         <ul class="messages">
@@ -68,6 +72,9 @@
         {% endif %}
 
     {% block content %} {% endblock %}
+</div>
+</div>
+</div>
 
 <!-- JS script for timing messages to user goes here! -->
 <!-- Bootstrap Footer goes here! Taken from codestar blog-->
