@@ -60,6 +60,8 @@ LOGIN = 'accounts/login'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
+ANONYMOUS_USER_NAME = 'Guest'
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
