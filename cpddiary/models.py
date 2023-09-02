@@ -16,14 +16,14 @@ class Entry(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True,
                              blank=True)
     date = models.DateTimeField(auto_now_add=True)
-    title = models.CharField(max_length=200)
-    learningOutcome = models.TextField(null=True, blank=True)
-    activityType = models.TextField(null=True, blank=True)
+    title = models.CharField(max_length=200, blank=False)
+    learningOutcome = models.TextField(null=True, blank=False)
+    activityType = models.TextField(null=True, blank=False)
     timeSpent = models.DecimalField(max_digits=4, decimal_places=2,
                                     validators=[validate_positive_decimal])
     cpdCredits = models.DecimalField(max_digits=4, decimal_places=2,
                                      validators=[validate_positive_decimal])
-    practiceImpact = models.TextField(null=True, blank=True)
+    practiceImpact = models.TextField(null=True, blank=False)
 
     def __str__(self):
         return self.title
