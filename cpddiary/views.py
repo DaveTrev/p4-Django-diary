@@ -45,6 +45,7 @@ class DiaryCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
               "cpdCredits", "practiceImpact"]
     success_url = reverse_lazy("entry-list")
     success_message = "Your new CPD diary entry was created!"
+    # Success message may need JS script to set time
 
     def form_valid(self, form):
         form.instance.user = self.request.user

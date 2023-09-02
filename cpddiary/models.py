@@ -8,6 +8,9 @@ def validate_positive_decimal(value):
     if value < 0.5:
         raise ValidationError("Value must be greater than or equal to 0.5")
 
+# change validators to min value 0.5 explain on form 
+# what that means and link to about page
+
 
 class Entry(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True,

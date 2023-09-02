@@ -68,6 +68,9 @@ https://www.valentinog.com/blog/get-context-data/
 
 https://djangoforbeginners.com/
 
+DEFENSIVE DESIGN
+https://forum.djangoproject.com/t/how-to-restrict-django-staff-user-to-edit-or-delete-others-staff-user-post-from-admin-panel/7887/5
+
 Code Institute - codestar blog / I think therefore I blog lessons
 
 user stories
