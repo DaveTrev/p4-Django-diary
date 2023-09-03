@@ -5,12 +5,14 @@ from .views import (
     DiaryCreateView,
     DiaryUpdateView,
     DiaryDeleteView,
+    AboutPageView,
     )
 from django.contrib.auth.views import LogoutView
 
 
 urlpatterns = [
     path('', DiaryListView.as_view(), name="entry-list"),
+    path('about/', AboutPageView.as_view(), name="about"),
     path('entry/<int:pk>/',
          DiaryDetailView.as_view(),
          name='entry-detail'),

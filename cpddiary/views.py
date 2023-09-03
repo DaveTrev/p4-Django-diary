@@ -11,8 +11,13 @@ from django.views.generic import (
 from django.urls import reverse_lazy
 from django.contrib.auth.views import LoginView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.views.generic import TemplateView
 from .models import Entry
 from .forms import EntryForm
+
+
+class AboutPageView(TemplateView):
+    template_name = 'about.html'
 
 
 class DiaryListView(LoginRequiredMixin, ListView):
