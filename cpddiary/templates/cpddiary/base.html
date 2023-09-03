@@ -63,7 +63,7 @@
     <div class="row">
       <div class="col-md-8 mt-3 offset-md-2">
 <!--Welcome user displays on all pages / custom anon user class to welcome guest? -->
-<div>
+<div id="welcome-message">
     {% if user.is_authenticated %}
   <h1>Welcome back, {{ user.username }}!</h1>
 {% else %}
@@ -86,6 +86,15 @@
 </div>
 
 <!-- JS script for timing messages to user goes here! -->
+<script>
+    window.addEventListener('load', function() {
+      var welcomeMessage = document.getElementById('welcome-message');
+      setTimeout(function() {
+        welcomeMessage.style.opacity = '0';
+        welcomeMessage.style.transition = 'opacity 1s';
+      }, 2500); // 2500 milliseconds = 2.5 seconds
+    });
+  </script>
 <!-- Bootstrap Footer goes here! Taken from codestar blog-->
 <footer class="footer h-5 mx-auto py-0.5 fixed-bottom " style="background-color: #d8e1e7;">
     <p class="m-0 text-center text-black">Made by DaveTrev</p>
