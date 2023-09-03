@@ -68,11 +68,18 @@ class DiaryUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
         )
 
 
-class DiaryDeleteView(LoginRequiredMixin, DeleteView):
+class DiaryDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Entry
     success_url = reverse_lazy("entry-list")
     success_message = "Your diary entry was deleted!"
 
+    def test_func(self):
+        entry = self.get_object()
+        return entry.author == self.request.user
+
     def delete(self, request, *args, **kwargs):
-        messages.success(self.request, self.success_message)
-        return super().delete(request, *args, **kwargs)
+        if self.test_func():
+            messages.success(self.request, self.success_message)
+            return super().delete(request, *args, **kwargs)
+        else:
+            return HttpResponseForbidden()

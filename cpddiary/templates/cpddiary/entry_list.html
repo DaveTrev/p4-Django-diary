@@ -23,6 +23,7 @@
 
 
 {% for entry in entries %}
+<!-- is removing diary entrys from view? {% if request.user.is_authenticated and entry.author.pk == request.user.pk %} -->
 <article>
     <h2 class="{{ entry.date|date:'l' }}">
         {{ entry.date|date:'Y-m-d H:i' }}
@@ -32,6 +33,7 @@
             {{ entry.title }}
         </a>
     </h3>
+    <!-- {% endif %} -->
     {% empty %}
     <h3>No Entries in Cpd Diary</h3>
 </article>
