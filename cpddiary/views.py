@@ -75,7 +75,7 @@ class DiaryDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 
     def test_func(self):
         entry = self.get_object()
-        return entry.author == self.request.user
+        return entry.user == self.request.user
 
     def delete(self, request, *args, **kwargs):
         if self.test_func():

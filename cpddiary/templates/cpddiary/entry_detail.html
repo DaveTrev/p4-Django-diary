@@ -16,9 +16,11 @@
     <h3>Impact on practice: </h3><p>{{ entry.practiceImpact }}</p>
 </article>
 
+{% if request.user.is_authenticated and entry.user.pk == request.user.pk %}
 <p>
     <a href="{% url 'entry-update' entry.id %}">✍️ Edit Diary Entry</a>
     <a href="{% url 'entry-delete' entry.id %}">⛔ Delete Diary Entry</a>
 </p>
-
+{% endif %}
+<p>Back to</p><a href="{% url 'entry-list' %}"> previous entries</a></p>
 {% endblock %}
