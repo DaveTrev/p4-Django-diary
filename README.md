@@ -288,6 +288,10 @@ When we use the allauth roots in our project, if allauth can't find the template
 installed allauth, downloaded templates
 extending base 
 
+forms.py, custom alerts written
+alerts not happening?
+
+
 removed validate positive decimal
 migrations failed due to missing validate positive decimal function
 removed validators=[cpddiary.models.validate_positive_decimal] from timeSpent and cpdCredits migration file 7

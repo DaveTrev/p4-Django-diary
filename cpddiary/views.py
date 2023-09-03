@@ -10,7 +10,7 @@ from django.views.generic import (
 )
 from django.urls import reverse_lazy
 from django.contrib.auth.views import LoginView
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from .models import Entry
 from .forms import EntryForm
 
@@ -40,13 +40,17 @@ class DiaryDetailView(LoginRequiredMixin, DetailView):
     model = Entry
 
 
-class DiaryCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
+class DiaryCreateView(LoginRequiredMixin, UserPassesTestMixin,
+                      SuccessMessageMixin, CreateView):
     model = Entry
     form_class = EntryForm
     success_url = reverse_lazy("entry-list")
     success_message = "Your new CPD diary entry was created!"
     # Success message may need JS script to set time
 
+    def test_func(self):
+        return self.request.user.is_authenticated
+      
     def form_valid(self, form):
         form.instance.user = self.request.user
         return super(DiaryCreateView, self).form_valid(form)

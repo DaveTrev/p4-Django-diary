@@ -25,6 +25,7 @@ class EntryForm(forms.ModelForm):
             },
         }
         widgets = {
+            'title': forms.TextInput(attrs={'required': True}),
             'timeSpent': forms.Textarea(attrs={'placeholder': 'e.g. 3 hours',
                                                'rows': 1, 'cols': 2})
         }
