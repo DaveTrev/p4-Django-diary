@@ -75,6 +75,9 @@ DEFENSIVE DESIGN
 https://forum.djangoproject.com/t/how-to-restrict-django-staff-user-to-edit-or-delete-others-staff-user-post-from-admin-panel/7887/5
 https://stackoverflow.com/questions/72980454/defensive-programming-for-delete-function-in-views-django
 
+Crispy forms how to
+https://www.youtube.com/watch?v=MZwKoi0wu2Q
+
 Code Institute - codestar blog / I think therefore I blog lessons
 
 user stories

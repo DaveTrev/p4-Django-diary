@@ -33,7 +33,7 @@
                     <a class="nav-link active text-white" aria-current="page" href="{% url 'entry-list' %}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-black" href="{% url 'about' %}">About CPD</a>
+                    <a class="nav-link text-black" href="{% url 'about' %}">About</a>
                 </li>
                 {% if request.user.is_authenticated %}
                 <li class="nav-item">
@@ -63,7 +63,13 @@
     <div class="row">
       <div class="col-md-8 mt-3 offset-md-2">
 <!--Welcome user displays on all pages / custom anon user class to welcome guest? -->
-<h1 class="nav-link text-black">Welcome {{request.user}}</h1>
+<div>
+    {% if user.is_authenticated %}
+  <h1>Welcome back, {{ user.username }}!</h1>
+{% else %}
+  <h1>Welcome, guest! Please sign up or log in to access our services.</h1>
+{% endif %}
+</div>
     {% if messages %}
         <ul class="messages">
             {% for message in messages %}
