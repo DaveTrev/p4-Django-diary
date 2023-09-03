@@ -1,50 +1,72 @@
 {% extends "cpddiary/base.html" %}
 
 {% block content %}
-<h1>CPD FAQ</h1>
 <!-- Text for CPD FAQ TAKEN From https://www.coru.ie/health-and-social-care-professionals/education/continuing-professional-development/cpd-faqs/-->
-<div class="accordion" id="accordionExample">
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-            What is CPD?
-        </button>
-      </h2>
-      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-        <div class="accordion-body">
-          <strong>Continuing professional development (CPD)</strong> is the means by which health and social care professionals maintain and improve their knowledge,
-           skills and performance, and develop the professional qualities required throughout their professional life.
-          CPD is an integral component in the continuing provision of safe and effective services for the benefit of service users.
-        </div>
-      </div>
+    <!-- taken from https://mdbootstrap.com/docs/standard/extended/faq/-->
+    <!--Section: FAQ-->
+<section>
+  <h3 class="text-center mb-4 pb-2 text-primary fw-bold">FAQ</h3>
+  <p class="text-center mb-5">
+    Find the answers for the most frequently asked questions below
+  </p>
+
+  <div class="row">
+    <div class="col-md-6 col-lg-4 mb-4">
+      <h6 class="mb-3 text-primary"><i class="far fa-paper-plane text-primary pe-2"></i> 
+        What is CPD?</h6>
+      <p>
+        <strong><u>Continuing professional development (CPD)</u></strong> is the means by which health and social care professionals maintain and improve their knowledge,
+        skills and performance, and develop the professional qualities required throughout their professional life.
+       CPD is an integral component in the continuing provision of safe and effective services for the benefit of service users.
+      </p>
     </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-         How many CPD credits do I need to accrue?
-        </button>
-      </h2>
-      <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-        <div class="accordion-body">
-          <strong>30 CPD credits.</strong> It is expected that at minimum you can demonstrate achieving 30 CPD credits in every 12-month period.
-          This demonstrates ongoing engagement in CPD.
-        </div>
-      </div>
+
+    <div class="col-md-6 col-lg-4 mb-4">
+      <h6 class="mb-3 text-primary"><i class="fas fa-pen-alt text-primary pe-2"></i> How many CPD credits do I need to accrue?</h6>
+      <p>
+        <strong><u>30 CPD credits</u></strong> It is expected that at minimum you can demonstrate achieving 30 CPD credits in every 12-month period.
+        This demonstrates ongoing engagement in CPD.
+      </p>
     </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-            Why is CPD important?
-        </button>
-      </h2>
-      <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-        <div class="accordion-body">
-          <strong>Active engagement</strong>Active engagement in CPD is critical to ensuring that registrants continue to have the up to date knowledge and skills necessary to deliver a safe and effective service to service users.
-        </div>
-      </div>
+
+    <div class="col-md-6 col-lg-4 mb-4">
+      <h6 class="mb-3 text-primary"><i class="fas fa-user text-primary pe-2"></i> Why is CPD important?
+      </h6>
+      <p>
+        Active engagement in CPD is critical to ensuring that registrants continue to have the up to date knowledge and skills necessary to deliver a safe and effective service to service users.
+      </p>
+    </div>
+
+    <div class="col-md-6 col-lg-4 mb-4">
+      <h6 class="mb-3 text-primary"><i class="fas fa-rocket text-primary pe-2"></i> How are CPD credits awarded?
+      </h6>
+      <p>
+        CPD credits are self-determined on the basis that one hour of new or enhanced learning is equal to one CPD credit. You can attribute any fraction of 1 hour to a learning activity. 
+        For example, a 15 minute discussion with a colleague that results in new or enhanced learning could be recorded as .25 credit.
+      </p>
+    </div>
+
+    <div class="col-md-6 col-lg-4 mb-4">
+      <h6 class="mb-3 text-primary"><i class="fas fa-home text-primary pe-2"></i> Can I carry surplus CPD credits forward to the next cycle?
+      </h6>
+      <p><strong><u>No.</u>.</strong>  Registrants may complete more than the necessary credits in a given period if they wish. However, credits cannot be transferred or carried forward to the next time period. 
+        They are only relevant to the CPD audit period during which they were completed.
+    </div>
+
+    <div class="col-md-6 col-lg-4 mb-4">
+      <h6 class="mb-3 text-primary"><i class="fas fa-book-open text-primary pe-2"></i> What needs to be included in the record of CPD?</h6>
+      <p>
+        <ul>
+          <li>Implementation of learning activities that achieved a minimum of 30 CPD credits of new  or enhanced learning</li>
+          <li>Evaluation and reflection of the learning achieved</li>
+          <li>Review  of learning needs for the next 12-month period</li>
+          <li>Planned learning activities for the next 12-month period</li>
+        </ul>
+      </p>
     </div>
   </div>
-
+</section>
+<!--Section: FAQ-->
 
    
 {% endblock %}

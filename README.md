@@ -78,6 +78,10 @@ https://stackoverflow.com/questions/72980454/defensive-programming-for-delete-fu
 Crispy forms how to
 https://www.youtube.com/watch?v=MZwKoi0wu2Q
 
+fade out with js 
+https://stackoverflow.com/questions/6121203/how-to-do-fade-in-and-fade-out-with-javascript-and-css
+https://jsfiddle.net/sunnypmody/XDaEk/
+
 Code Institute - codestar blog / I think therefore I blog lessons
 
 user stories
