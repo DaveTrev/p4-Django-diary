@@ -6,18 +6,18 @@
 
 body {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 a {
     color: inherit;
 }
 a:hover {
-    opacity: 0.7;
+    opacity: 0.15;
 }
 
 h1 {
-    font-size: 2.8em;
+    font-size: 3em;
 }
 
 h1 a {
@@ -25,7 +25,7 @@ h1 a {
 }
 
 h2, h3 {
-    font-size: 1.4em;
+    font-size: 1.5em;
     margin: 0;
     display: inline-block;
     padding: 0.5rem 1rem;
@@ -41,7 +41,7 @@ h2, h3 {
 }
 
 article {
-    margin-bottom: 2.5rem;
+    margin-bottom: 2.6rem;
 }
 
 p {
@@ -103,6 +103,9 @@ input[type="submit"] {
     margin: 1rem 0;
 }
 
+ /* Navbar
+  ------------------------- */
+ 
 /* cpd entry form styling */
 .cpd-entry {
     background-color: #bbcff09f;
@@ -154,11 +157,6 @@ body {
   
   @media (min-width: 40em) {
     /* Bump up size of carousel content */
-    .carousel-caption p {
-      margin-bottom: 1.25rem;
-      font-size: 1.25rem;
-      line-height: 1.4;
-    }
   
     .featurette-heading {
       font-size: 50px;
