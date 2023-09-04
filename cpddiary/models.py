@@ -36,4 +36,3 @@ class Entry(models.Model):
     class Meta:
         ordering = ['date']
         verbose_name_plural = "Entries"
-

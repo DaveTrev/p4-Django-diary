@@ -41,14 +41,14 @@ h2, h3 {
 }
 
 article {
-    margin-bottom: 0.5rem;
+    margin-bottom: 2.5rem;
 }
 
 p {
     font-size: 1.2em;
     padding-left: 1rem;
     line-height: 1.3em;
-    color: dimgray;
+    color: rgb(53, 52, 52);
 }
 
 em {
@@ -102,6 +102,24 @@ input[type="submit"] {
     text-align: center;
     margin: 1rem 0;
 }
+
+/* cpd entry form styling */
+.cpd-entry {
+    background-color: #bbcff09f;
+    padding: 10px;
+    font-size: 20px;
+  }
+  .cpd-entry header {
+    margin-bottom: 14px;
+  }
+  .cpd-entry ul {
+    list-style: circle;
+    margin: 0;
+    padding: 0;
+  }
+  .cpd-entry li {
+    margin-bottom: 10px;
+  }
 
 /* bootstrap carosel example */
 /* GLOBAL STYLES
