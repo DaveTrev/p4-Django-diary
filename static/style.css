@@ -106,10 +106,12 @@ input[type="submit"] {
 /* cpd entry form styling */
 .cpd-entry {
     background-color: #bbcff09f;
-    padding: 10px;
+    padding: 26px;
     font-size: 20px;
+    padding-top: 10px;
   }
   .cpd-entry header {
+    padding-top: 2px;
     margin-bottom: 14px;
   }
   .cpd-entry ul {
