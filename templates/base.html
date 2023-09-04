@@ -30,8 +30,11 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-black" aria-current="page" href="{% url 'home' %}">Home</a>
+            </li>
                 <li class="nav-item">
-                    <a class="nav-link active text-black" aria-current="page" href="{% url 'entry-list' %}">Home</a>
+                    <a class="nav-link active text-black" aria-current="page" href="{% url 'entry-list' %}">Log Cpd</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-black" href="{% url 'about' %}">About</a>
@@ -49,6 +52,13 @@
                 </li>
                 {% endif %}
             </ul>
+            <div id="welcome-message">
+              {% if user.is_authenticated %}
+            <h4>Welcome back, {{ user.username }}!</h4>
+          {% else %}
+            <h4>Welcome, guest! Please sign up or log in to access our services.</h4>
+          {% endif %}
+          </div>
             <form class="d-flex" role="search" method="GET">
               <input class="form-control me-2" type="text" name="search-page" value="{{search_bar}}" placeholder="Search" aria-label="Search">
               <button class="btn btn-outline-success" type="submit" value="Search">Search</button>
@@ -64,13 +74,7 @@
     <div class="row">
       <div class="col-md-8 mt-3 offset-md-2">
 <!--Welcome user displays on all pages / custom anon user class to welcome guest? -->
-<div id="welcome-message">
-    {% if user.is_authenticated %}
-  <h1>Welcome back, {{ user.username }}!</h1>
-{% else %}
-  <h1>Welcome, guest! Please sign up or log in to access our services.</h1>
-{% endif %}
-</div>
+
     {% if messages %}
         <ul class="messages">
             {% for message in messages %}
