@@ -16,7 +16,7 @@ def validate_positive_decimal(value):
 class Entry(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True,
                              blank=True)
-    date = date = models.DateField()
+    date = models.DateTimeField(auto_now_add=True)
     title = models.CharField(max_length=200, blank=False, verbose_name="Title")
     learningOutcome = models.TextField(null=True, blank=False,
                                        verbose_name="Learning Outcome")
