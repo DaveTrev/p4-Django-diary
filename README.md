@@ -83,8 +83,10 @@ https://stackoverflow.com/questions/6121203/how-to-do-fade-in-and-fade-out-with-
 https://jsfiddle.net/sunnypmody/XDaEk/
 
 
-unsplah images
+unsplash images for index page
 https://unsplash.com/photos/wpi3sDUrSEk
+https://unsplash.com/photos/G1iYCeCW2EI
+https://unsplash.com/photos/ZI2Lv7jxmEM
 
 Code Institute - codestar blog / I think therefore I blog lessons
 
