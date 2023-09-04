@@ -20,25 +20,27 @@
     <a href="{% url 'entry-create' %}"><button>Add a new diary entry</button></a>
 </article>
 
-
+<table class="table">
+  <thead>
+      <tr>
+          <th>Date</th>
+          <th>Title</th>
+      </tr>
+  </thead>
 {% for entry in entries %}
 {% if request.user.is_authenticated and entry.user.pk == request.user.pk %}
-<article>
-    <h2 class="{{ entry.date|date:'l' }}">
-        {{ entry.date|date:'Y-m-d H:i' }}
-    </h2>
-    <h3>
-        <a href="{% url 'entry-detail' entry.id %}">
-            {{ entry.title }}
-        </a>
-    </h3>
-    {% endif %}
-    {% empty %}
-    <h3>No Entries in Cpd Diary</h3>
-</article>
-
+<tr>
+    <td>{{ entry.date|date:'Y-m-d H:i' }}</td>
+    <td><a href="{% url 'entry-detail' entry.id %}">{{ entry.title }}</a></td>
+</tr>
+{% endif %}
+{% empty %}
+<tr>
+<td colspan="2">No Entries in Cpd Diary</td>
+</tr>
 {% endfor %}
-
+</tbody>
+</table>
 {% if is_paginated %}
   <nav aria-label="Page navigation conatiner"></nav>
   <ul class="pagination justify-content-center">
