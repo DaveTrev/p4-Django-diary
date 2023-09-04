@@ -29,7 +29,7 @@ class DiaryListView(LoginRequiredMixin, ListView):
     queryset = Entry.objects.all().order_by("-date")
     context_object_name = 'entries'
     template_name = 'entry_list.html'
-
+    
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['entries'] = context['entries'].filter(user=self.request.user)
