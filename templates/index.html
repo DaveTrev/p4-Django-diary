@@ -8,9 +8,16 @@
 <main>
 
 <!--index page styling taken from bootstrap carousel template https://getbootstrap.com/docs/4.0/examples/ -->
+<div class="p-5 mb-4 bg-body-tertiary rounded-3" style="background-image: url('https://res.cloudinary.com/dgyi5uhu9/image/upload/v1693948991/ashley-west-edwards-AjcVTjCz310-unsplash_cleanup_ds0oo7.png'); background-size: cover; background-position: center;">
+  <div class="container-fluid py-5">
+    <h1 class="display-5 fw-bold">EYE<sub>|contribute</sub></h1>
+    <p class="col-md-8 fs-4" class="intro">A virtual CPD diary for the Optometrist and Dispensing Optician</p>
+    <a aria-current="page" href="{% url 'entry-list' %}"></a><button class="btn btn-primary btn-lg" type="button">Log Your Cpd learning here</button></a>
+  </div>
+</div>
 
   <!-- START THE FEATURETTES -->
- <a aria-current="page" href="{% url 'entry-list' %}"><button type="button" class="btn btn-outline-primary" >Log Cpd learning here</button>
+ <a aria-current="page" href="{% url 'account_signup' %}"><button type="button" class="btn btn-outline-primary" >New user? Register today</button>
     <hr></a> 
   <div class="row featurette">
     <div class="col-md-7">

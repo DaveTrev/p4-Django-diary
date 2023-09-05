@@ -82,11 +82,21 @@ fade out with js
 https://stackoverflow.com/questions/6121203/how-to-do-fade-in-and-fade-out-with-javascript-and-css
 https://jsfiddle.net/sunnypmody/XDaEk/
 
+pagination with class based views
+https://dontrepeatyourself.org/post/django-pagination-with-class-based-view/
+
+pagination with filtering
+https://www.caktusgroup.com/blog/2018/10/18/filtering-and-pagination-django/
 
 unsplash images for index page
 https://unsplash.com/photos/wpi3sDUrSEk
 https://unsplash.com/photos/G1iYCeCW2EI
 https://unsplash.com/photos/ZI2Lv7jxmEM
+https://unsplash.com/photos/6qThS1x6P6A
+https://unsplash.com/photos/AjcVTjCz310
+https://unsplash.com/photos/57USw1-h50k
+
+used https://cleanup.pictures/ to remove pencil from picture
 
 Code Institute - codestar blog / I think therefore I blog lessons
 

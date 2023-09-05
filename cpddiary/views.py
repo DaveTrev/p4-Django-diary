@@ -12,6 +12,7 @@ from django.urls import reverse_lazy
 from django.contrib.auth.views import LoginView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.views.generic import TemplateView
+from django.core.paginator import Paginator, EmptyPage
 from .models import Entry
 from .forms import EntryForm
 
@@ -38,11 +39,12 @@ class DiaryListView(LoginRequiredMixin, ListView):
         if search_bar:
             context['entries'] = context['entries'].filter(
                 title__icontains=search_bar)
-# possible change to search bar needed, how to refresh in real time
-# https://stackoverflow.com/questions/61446467/how-to-make-a-search-bar-that-refresh-everytime-the-user-input-something
 
         context['search_bar'] = search_bar
         return context
+
+# possible change to search bar needed, how to refresh in real time
+# https://stackoverflow.com/questions/61446467/how-to-make-a-search-bar-that-refresh-everytime-the-user-input-something
 
 
 class DiaryDetailView(LoginRequiredMixin, DetailView):
