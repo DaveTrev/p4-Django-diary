@@ -13,6 +13,8 @@ from django.contrib.auth.views import LoginView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.views.generic import TemplateView
 from django.core.paginator import Paginator, EmptyPage
+from django.shortcuts import render
+from django.template import RequestContext
 from .models import Entry
 from .forms import EntryForm
 
@@ -94,3 +96,11 @@ class DiaryDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
             return super().delete(request, *args, **kwargs)
         else:
             return HttpResponseForbidden()
+
+
+def Custom_404(request, exception):
+    return render(request, '404.html', {})
+
+
+def Custom_500(request):
+    return render(request, '500.html', {})

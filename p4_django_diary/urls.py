@@ -21,3 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("accounts/", include("allauth.urls")),
 ]
+
+handler404 = 'cpddiary.views.Custom_404'
+
+handler500 = 'cpddiary.views.Custom_500'

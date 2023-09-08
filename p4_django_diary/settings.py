@@ -32,6 +32,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+# ALLOWED_HOSTS = ["*"]
+
 ALLOWED_HOSTS = ["cpddiary-bd5599156530.herokuapp.com", 
                  "8000-davetrev-p4djangodiary-8rojtdy8ldg.ws-eu104.gitpod.io"]
 

@@ -88,6 +88,8 @@ https://dontrepeatyourself.org/post/django-pagination-with-class-based-view/
 pagination with filtering
 https://www.caktusgroup.com/blog/2018/10/18/filtering-and-pagination-django/
 
+404 page how to https://www.geeksforgeeks.org/django-creating-a-404-error-page/
+
 unsplash images for index page
 https://unsplash.com/photos/wpi3sDUrSEk
 https://unsplash.com/photos/G1iYCeCW2EI
@@ -95,6 +97,7 @@ https://unsplash.com/photos/ZI2Lv7jxmEM
 https://unsplash.com/photos/6qThS1x6P6A
 https://unsplash.com/photos/AjcVTjCz310
 https://unsplash.com/photos/57USw1-h50k
+broken glasses - https://unsplash.com/photos/jgPcjw2tBVc
 
 used https://cleanup.pictures/ to remove pencil from picture
 

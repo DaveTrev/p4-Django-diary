@@ -10,7 +10,6 @@ from .views import (
     )
 from django.contrib.auth.views import LogoutView
 
-
 urlpatterns = [
     path('', HomePageView.as_view(), name="home"),
     path('entrylist/', DiaryListView.as_view(), name="entry-list"),
