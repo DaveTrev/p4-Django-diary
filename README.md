@@ -327,6 +327,10 @@ removed validators=[cpddiary.models.validate_positive_decimal] from timeSpent an
 reinstated code, as could not migrate, to return to this bug!! 
 
 
+styling impacting view on mobile, timespent field, too small
+footer is covering save/cancel options for user
+
+
 
 CORU LINKS ON CPD 
 https://www.coru.ie/health-and-social-care-professionals/education/continuing-professional-development/cpd-audit/
