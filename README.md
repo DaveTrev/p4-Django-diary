@@ -93,6 +93,9 @@ https://stackoverflow.com/questions/64618631/how-to-filter-and-paginate-in-listv
 
 404 page how to https://www.geeksforgeeks.org/django-creating-a-404-error-page/
 
+form validation - dark hamster
+https://www.dark-hamster.com/application/how-to-display-form-error-in-django/
+
 unsplash images for index page
 https://unsplash.com/photos/wpi3sDUrSEk
 https://unsplash.com/photos/G1iYCeCW2EI
@@ -330,7 +333,7 @@ reinstated code, as could not migrate, to return to this bug!!
 styling impacting view on mobile, timespent field, too small
 footer is covering save/cancel options for user
 
-
+alert messages not displaying
 
 CORU LINKS ON CPD 
 https://www.coru.ie/health-and-social-care-professionals/education/continuing-professional-development/cpd-audit/

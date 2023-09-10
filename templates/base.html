@@ -20,7 +20,6 @@
 
 <body class="d-flex flex-column h-100">
   <!-- Bootstrap navbar goes here! -->
-  <!-- HOME LOGIN LOGOUT BUTTONS DISAPPEAR WHEN RESPONSIVE -->
   <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: #d8e1e7;">
       <div class="container-fluid">
@@ -56,13 +55,7 @@
             </li>
             {% endif %}
           </ul>
-          <div id="welcome-message">
-            {% if user.is_authenticated %}
-            <h4>Welcome back, {{ user.username }}!</h4>
-            {% else %}
-            <h4>Welcome, guest! Please sign up or log in to access our services.</h4>
-            {% endif %}
-          </div>
+
           <form class="d-flex" role="search" method="GET">
             {% csrf_token %}
             <input class="form-control me-2" type="text" name="search-page" value="{{search_bar}}"
@@ -72,8 +65,23 @@
         </div>
       </div>
     </nav>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          {% for messages in messages %}
+          <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
+            {{ messages | safe }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
   </header>
+  <!--Welcome user displays on all pages / custom anon user class to welcome guest? -->
+
   <!-- if adding login screen add text to describe what counts as cpd -->
+<main>
 
   <!-- possible link to coru and about page on logging cpd to be added -->
   <!-- Add forms / cards to better display diary entrys -->
@@ -81,22 +89,14 @@
     <div class="row">
       <div class="col-md-8 mt-3 offset-md-2">
         <!--Welcome user displays on all pages / custom anon user class to welcome guest? -->
-
-        {% if messages %}
-        <ul class="messages">
-          {% for message in messages %}
-          <li class="message">
-            {{ message }}
-          </li>
-          {% endfor %}
-        </ul>
-        {% endif %}
-
-        {% block content %} {% endblock %}
+        {% block content %} 
+        
+        
+        {% endblock %}
       </div>
     </div>
   </div>
-
+</main>
 
   <!-- Bootstrap Footer goes here! Taken from codestar blog-->
   <footer class="footer h-5 mt-auto" style="background-color: #d8e1e7;">
