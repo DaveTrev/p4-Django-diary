@@ -4,25 +4,29 @@
 
 {% block content %}
 
-<!-- time displaying incorrectly one hour behind local time in Dublin -->
-<article class="cpd-entry">
-<header>
-    <h2>{{ entry.title }}</h2>
+<div class="card border-primary mb-3">
+  <div class="card-body">
+    <div class="row">
+      <div class="col-sm-6">
+    <h2 class="card-title card border-info mb-3">{{ entry.title }}</h2>
     <hr>
-    <p><strong>Date:</strong>{{ entry.date|date:'d-m-Y' }}</p>
-        <!-- CPD credits values need to be changed to whole numbers or add text to advise, time = credits -->
-    <!-- Time spent, possible need to change numeric display to minutes for ease of use for user -->
-    <p><strong>Cpd credits:</strong> {{ entry.cpdCredits }}</p>
-    <p><strong>Time Spent:</strong>{{ entry.timeSpent }}<strong</p>
-</header>
-<ul>
-    <li><strong>Learning Outcome:</strong> {{ entry.learningOutcome }}</li>
-    <li><strong>Type of learning activity:</strong> {{ entry.activityType }}</li>
-    <li><strong>Impact on practice:</strong> {{ entry.practiceImpact }}</li>
-</ul>
-<hr>
-<p>Remember Approx. 1 CPD credit for every hour of new or enhanced learning achieved.</p>
-</article>
+    <p class="card-text"><strong>Date:</strong> {{ entry.date|date:'d-m-Y' }}</p>
+    <p class="card-text"><strong>Cpd credits:</strong> {{ entry.cpdCredits }}</p>
+    <p class="card-text"><strong>Time Spent:</strong> {{ entry.timeSpent }}</p>
+  </div>
+  <hr>
+  <h5 class="card-subtitle mb-2 text-muted">Learning Outcome:</h5>
+  <p class="card-text">{{ entry.learningOutcome }}</p>
+  <h5 class="card-subtitle mb-2 text-muted">Type of learning activity:</h5>
+  <p class="card-text">{{ entry.activityType }}</p>
+  <h5 class="card-subtitle mb-2 text-muted">Impact on practice:</h5>
+  <p class="card-text">{{ entry.practiceImpact }}</p>
+  <hr>
+  </div>
+    <hr>
+    <p class="card-text">Remember Approx. 1 CPD credit for every hour of new or enhanced learning achieved.</p>
+  </div>
+</div>
 
 <div class="container">
     <div class="row justify-content-center" style="border: 1px solid rgb(42, 53, 196); padding: px; border-radius: 5px; box-shadow: 2px 2px 5px gray; padding: 20px;">
