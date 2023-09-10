@@ -65,12 +65,17 @@ label {
     display: block;
 }
 
+.back-button {
+text-decoration: none;
+}
+
 button,
 textarea,
 input {
     font-size: inherit;
     min-height: 2.5em;
     padding: 0 1rem;
+    text-decoration: none;
 }
 
 input[type="text"],

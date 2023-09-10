@@ -23,11 +23,18 @@
 <hr>
 <p>Remember Approx. 1 CPD credit for every hour of new or enhanced learning achieved.</p>
 </article>
+
+<div class="container">
+    <div class="row justify-content-center" style="border: 1px solid black; padding: px; border-radius: 5px; box-shadow: 2px 2px 5px gray; padding: 20px;">
+      <div class="col-md-8 mt-3">
 {% if request.user.is_authenticated and entry.user.pk == request.user.pk %}
 <p>
     <a href="{% url 'entry-update' entry.id %}">✍️ Edit Diary Entry</a>
     <a href="{% url 'entry-delete' entry.id %}">⛔ Delete Diary Entry</a>
 </p>
 {% endif %}
-<p>Back to</p><a href="{% url 'entry-list' %}"> previous entries</a></p>
+<button class="btn btn-outline-primary back-button" style="text-decoration: none;"><a href="{% url 'entry-list' %}">Back to your Diary</a></button>
+</div>
+</div>
+</div>
 {% endblock %}
