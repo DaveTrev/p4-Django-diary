@@ -32,18 +32,22 @@ class DiaryListView(LoginRequiredMixin, ListView):
     queryset = Entry.objects.all().order_by("-date")
     context_object_name = 'entries'
     template_name = 'entry_list.html'
-    
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['entries'] = context['entries'].filter(user=self.request.user)
+    paginate_by = 8
 
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        queryset = queryset.filter(user=self.request.user)
         search_bar = self.request.GET.get('search-page') or ''
         if search_bar:
-            context['entries'] = context['entries'].filter(
-                title__icontains=search_bar)
+            queryset = queryset.filter(title__icontains=search_bar)
+        return queryset.order_by("-date")
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        search_bar = self.request.GET.get('search-page') or ''
         context['search_bar'] = search_bar
         return context
+
 
 # possible change to search bar needed, how to refresh in real time
 # https://stackoverflow.com/questions/61446467/how-to-make-a-search-bar-that-refresh-everytime-the-user-input-something

@@ -88,6 +88,9 @@ https://dontrepeatyourself.org/post/django-pagination-with-class-based-view/
 pagination with filtering
 https://www.caktusgroup.com/blog/2018/10/18/filtering-and-pagination-django/
 
+pagination -> with filter and search
+https://stackoverflow.com/questions/64618631/how-to-filter-and-paginate-in-listview-django
+
 404 page how to https://www.geeksforgeeks.org/django-creating-a-404-error-page/
 
 unsplash images for index page
