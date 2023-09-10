@@ -4,119 +4,126 @@
 <html class="h-100">
 
 <head>
-    <title>CPD Diary</title>
+  <title>CPD Diary</title>
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
-    </script>
-    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+  </script>
+  <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
 
 </head>
 
-
-<!-- Bootstrap navbar goes here! -->
-<!-- HOME LOGIN LOGOUT BUTTONS DISAPPEAR WHEN RESPONSIVE -->
-
+<body class="d-flex flex-column h-100">
+  <!-- Bootstrap navbar goes here! -->
+  <!-- HOME LOGIN LOGOUT BUTTONS DISAPPEAR WHEN RESPONSIVE -->
+  <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: #d8e1e7;">
-        <div class="container-fluid">
-          <a class="nav-link active text-dark" aria-current="page" href="{% url 'home' %}"><h1 class="nav-title">EYE<sub>|contribute</sub></h1></a>
-          <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active text-black"  aria-current="page" href="{% url 'home' %}">Home</a>
-            </li> 
-                <li class="nav-item">
-                    <a class="nav-link active text-black" aria-current="page" href="{% url 'entry-list' %}">My Diary</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-black" href="{% url 'about' %}">About</a>
-                </li>
-                {% if request.user.is_authenticated %}
-                <li class="nav-item">
-                    <a class="nav-link text-black" href="{% url 'account_logout' %}">Logout</a>
-                </li>
-                {% else %}
-                <li class="nav-item">
-                    <a class="nav-link text-black" href="{% url 'account_signup' %}">Register</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-black" href="{% url 'account_login' %}">Login</a>
-                </li>
-                {% endif %}
-            </ul>
-            <div id="welcome-message">
-              {% if user.is_authenticated %}
+      <div class="container-fluid">
+        <a class="nav-link active text-dark" aria-current="page" href="{% url 'home' %}">
+          <h1 class="nav-title">EYE<sub>|contribute</sub></h1>
+        </a>
+        <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active text-black" aria-current="page" href="{% url 'home' %}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active text-black" aria-current="page" href="{% url 'entry-list' %}">My Diary</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-black" href="{% url 'about' %}">About</a>
+            </li>
+            {% if request.user.is_authenticated %}
+            <li class="nav-item">
+              <a class="nav-link text-black" href="{% url 'account_logout' %}">Logout</a>
+            </li>
+            {% else %}
+            <li class="nav-item">
+              <a class="nav-link text-black" href="{% url 'account_signup' %}">Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-black" href="{% url 'account_login' %}">Login</a>
+            </li>
+            {% endif %}
+          </ul>
+          <div id="welcome-message">
+            {% if user.is_authenticated %}
             <h4>Welcome back, {{ user.username }}!</h4>
-          {% else %}
+            {% else %}
             <h4>Welcome, guest! Please sign up or log in to access our services.</h4>
-          {% endif %}
+            {% endif %}
           </div>
-            <form class="d-flex" role="search" method="GET">
-              {% csrf_token %}
-              <input class="form-control me-2" type="text" name="search-page" value="{{search_bar}}" placeholder="Search Diary" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit" value="Search">Search</button>
-            </form>
-          </div>
+          <form class="d-flex" role="search" method="GET">
+            {% csrf_token %}
+            <input class="form-control me-2" type="text" name="search-page" value="{{search_bar}}"
+              placeholder="Search Diary" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit" value="Search">Search</button>
+          </form>
         </div>
-      </nav>
-<!-- if adding login screen add text to describe what counts as cpd -->
+      </div>
+    </nav>
+  </header>
+  <!-- if adding login screen add text to describe what counts as cpd -->
 
-<!-- possible link to coru and about page on logging cpd to be added -->
-<!-- Add forms / cards to better display diary entrys -->
-<div class="container">
+  <!-- possible link to coru and about page on logging cpd to be added -->
+  <!-- Add forms / cards to better display diary entrys -->
+  <div class="container">
     <div class="row">
       <div class="col-md-8 mt-3 offset-md-2">
-<!--Welcome user displays on all pages / custom anon user class to welcome guest? -->
+        <!--Welcome user displays on all pages / custom anon user class to welcome guest? -->
 
-    {% if messages %}
+        {% if messages %}
         <ul class="messages">
-            {% for message in messages %}
-            <li class="message">
-                {{ message }}
-            </li>
-            {% endfor %}
+          {% for message in messages %}
+          <li class="message">
+            {{ message }}
+          </li>
+          {% endfor %}
         </ul>
         {% endif %}
 
-    {% block content %} {% endblock %}
-</div>
-</div>
-</div>
+        {% block content %} {% endblock %}
+      </div>
+    </div>
+  </div>
 
-<!-- JS script for timing messages to user goes here! -->
-<script>
-    window.addEventListener('load', function() {
+
+  <!-- Bootstrap Footer goes here! Taken from codestar blog-->
+  <footer class="footer h-5 mt-auto" style="background-color: #d8e1e7;">
+    <p class="m-0 text-center text-black">Made by DaveTrev</p>
+    <p class="m-0 text-center text-black">This website is used for educational purposes only</p>
+    <p class="m-0 text-center text-black">Follow us: <i class="fab fa-facebook-square ms-3"></i>
+      <i class="fa-brands fa-x-twitter"></i> <!-- create links to socials -->
+      <i class="fab fa-instagram-square ms-3"></i> <!-- create links to socials -->
+      <i class="fab fa-youtube-square ms-3"></i></p> <!-- create links to socials -->
+
+    <!-- create links to important links -->
+    <!-- create links to important links IADO -->
+    <!-- create links to important links Coru -->
+    <!-- create links to important links AOI -->
+
+  </footer>
+
+  <!-- JS script for timing messages to user goes here! -->
+  <script>
+    window.addEventListener('load', function () {
       var welcomeMessage = document.getElementById('welcome-message');
-      setTimeout(function() {
+      setTimeout(function () {
         welcomeMessage.style.opacity = '0';
         welcomeMessage.style.transition = 'opacity 1s';
       }, 2500); // 2500 milliseconds = 2.5 seconds
     });
-    
   </script>
-<!-- Bootstrap Footer goes here! Taken from codestar blog-->
-<footer class="footer h-5 mx-auto py-0.5 fixed-bottom " style="background-color: #d8e1e7;">
-    <p class="m-0 text-center text-black">Made by DaveTrev</p>
-    <p class="m-0 text-center text-black">This website is used for educational purposes only</p>
-    <p class="m-0 text-center text-black">Follow us: <i class="fab fa-facebook-square ms-3"></i>
-        <i class="fa-brands fa-x-twitter"></i>       <!-- create links to socials -->
-        <i class="fab fa-instagram-square ms-3"></i>     <!-- create links to socials -->
-        <i class="fab fa-youtube-square ms-3"></i></p>    <!-- create links to socials -->
-
-        <!-- create links to important links -->
-        <!-- create links to important links IADO -->
-        <!-- create links to important links Coru -->
-        <!-- create links to important links AOI -->
-        
-</footer>
 </body>
 
 </html>
