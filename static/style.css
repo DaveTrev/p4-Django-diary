@@ -59,6 +59,10 @@ em {
     font-weight: bold;
 }
 
+.no-underline {
+  text-decoration: none;
+}
+
 /* Form */
 
 label {
