@@ -11,9 +11,7 @@ body {
 
 a {
     color: inherit;
-}
-a:hover {
-    opacity: 0.15;
+    text-decoration: none;
 }
 
 h1 {
@@ -36,7 +34,7 @@ h2, h3 {
   color: #084298;
 }
 
-.mark {
+.datefield {
     background-color: gainsboro;
 }
 .mark a {
@@ -44,7 +42,7 @@ h2, h3 {
 }
 
 article {
-    margin-bottom: 2.6rem;
+    margin-bottom: 2.0rem;
 }
 
 p {
