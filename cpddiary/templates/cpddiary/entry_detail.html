@@ -9,7 +9,7 @@
 <header>
     <h2>{{ entry.title }}</h2>
     <hr>
-    <p><strong>Date:</strong>{{ entry.date|date:'d-m-Y H:i' }}</p>
+    <p><strong>Date:</strong>{{ entry.date|date:'d-m-Y' }}</p>
         <!-- CPD credits values need to be changed to whole numbers or add text to advise, time = credits -->
     <!-- Time spent, possible need to change numeric display to minutes for ease of use for user -->
     <p><strong>Cpd credits:</strong> {{ entry.cpdCredits }}</p>

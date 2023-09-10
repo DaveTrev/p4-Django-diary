@@ -22,7 +22,7 @@
   <div class="row justify-content-center" style="border: 1px solid black; padding: px;">
     <div class="col-md-8 mt-3">
       <article class="text-center">
-        <h2 class="mark">{% now "d-m-Y H:i" %}</em></h2>
+        <h2 class="mark">{% now "d-m-Y" %}</em></h2>
         <a href="{% url 'entry-create' %}"><button class="btn btn-outline-primary">Add a new diary entry</button></a>
       </article>
     </div>
@@ -43,7 +43,7 @@
     {% if request.user.is_authenticated and entry.user.pk == request.user.pk %}
     <tr>
       <th scope="row">{{ entry.id }}</th>
-      <td><a href="{% url 'entry-detail' entry.id %}">{{ entry.date|date:'Y-m-d H:i' }}</a></td>
+      <td><a href="{% url 'entry-detail' entry.id %}">{{ entry.date|date:'d-m-Y' }}</a></td>
       <td><a href="{% url 'entry-detail' entry.id %}">{{ entry.title }}</a></td>
       <td><a href="{% url 'entry-detail' entry.id %}">{{ entry.cpdCredits }}</a></td>
     </tr>
