@@ -5,22 +5,29 @@
 {% block content %}
 
 <div class="container">
-    <div class="row justify-content-center" style="border: 1px solid black; padding: px;">
-        <div class="col-md-8 mt-3">
-  <p>CORU CPD Requirements
-    30 Credits per year (each credit represents 1 hour of new learning or enhanced understanding of a topic).
-    If called for audit you must make a submission of 30 Credits from your portfolio that best represents your CPD for the year.
-    Each submission must include a Review of your learning for the year and a Plan for the next year.
-    The cycle starts on 1st April each year and runs until the 31st March.
-    </p>
+  <div class="row justify-content-center" style="border: 1px solid black; padding: px;">
+    <div class="col-md-8 mt-3">
+      <p>CORU CPD Requirements
+        30 Credits per year (each credit represents 1 hour of new learning or enhanced understanding of a topic).
+        If called for audit you must make a submission of 30 Credits from your portfolio that best represents your CPD
+        for the year.
+        Each submission must include a Review of your learning for the year and a Plan for the next year.
+        The cycle starts on 1st April each year and runs until the 31st March.
+      </p>
+    </div>
   </div>
-  </div>
-  </div>
+</div>
 
-<article>
-    <h2 class="mark">{% now "d-m-Y H:i" %}</em></h2>
-    <a href="{% url 'entry-create' %}"><button>Add a new diary entry</button></a>
-</article>
+<div class="container">
+  <div class="row justify-content-center" style="border: 1px solid black; padding: px;">
+    <div class="col-md-8 mt-3">
+      <article class="text-center">
+        <h2 class="mark">{% now "d-m-Y H:i" %}</em></h2>
+        <a href="{% url 'entry-create' %}"><button>Add a new diary entry</button></a>
+      </article>
+    </div>
+  </div>
+</div>
 
 <div class="table-responsive">
   <table class="table table-hover">
@@ -36,31 +43,30 @@
     {% if request.user.is_authenticated and entry.user.pk == request.user.pk %}
     <tr>
       <th scope="row">{{ entry.id }}</th>
-      <td><a href="{% url 'entry-detail' entry.id %}" >{{ entry.date|date:'Y-m-d H:i' }}</a></td>
-      <td><a href="{% url 'entry-detail' entry.id %}" >{{ entry.title }}</a></td>
-      <td><a href="{% url 'entry-detail' entry.id %}" >{{ entry.cpdCredits }}</a></td>
+      <td><a href="{% url 'entry-detail' entry.id %}">{{ entry.date|date:'Y-m-d H:i' }}</a></td>
+      <td><a href="{% url 'entry-detail' entry.id %}">{{ entry.title }}</a></td>
+      <td><a href="{% url 'entry-detail' entry.id %}">{{ entry.cpdCredits }}</a></td>
     </tr>
     {% endif %}
-{% empty %}
-<tr>
-  <td colspan="2">No Entries in Cpd Diary</td>
-</tr>
-{% endfor %}
+    {% empty %}
+    <tr>
+      <td colspan="2">No Entries in Cpd Diary</td>
+    </tr>
+    {% endfor %}
   </table>
 </div>
 
 {% if is_paginated %}
-  <nav aria-label="Page navigation conatiner"></nav>
-  <ul class="pagination justify-content-center">
-    {% if page_obj.has_previous %}
-    <li><a href="?page={{ page_obj.previous_page_number }}"
- class="page-link">&laquo; PREV </a></li>
-    {% endif %}    {% if page_obj.has_next %}
-    <li><a href="?page={{ page_obj.next_page_number }}"
- class="page-link"> NEXT &raquo;</a></li>
-    {% endif %}
-  </ul>
-  </nav></div>
+<nav aria-label="Page navigation conatiner"></nav>
+<ul class="pagination justify-content-center">
+  {% if page_obj.has_previous %}
+  <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+  {% endif %} {% if page_obj.has_next %}
+  <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+  {% endif %}
+</ul>
+</nav>
+</div>
 {% endif %}
 
 {% endblock %}
