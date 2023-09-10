@@ -25,15 +25,15 @@
 </article>
 
 <div class="container">
-    <div class="row justify-content-center" style="border: 1px solid black; padding: px; border-radius: 5px; box-shadow: 2px 2px 5px gray; padding: 20px;">
+    <div class="row justify-content-center" style="border: 1px solid rgb(42, 53, 196); padding: px; border-radius: 5px; box-shadow: 2px 2px 5px gray; padding: 20px;">
       <div class="col-md-8 mt-3">
-{% if request.user.is_authenticated and entry.user.pk == request.user.pk %}
-<p>
-    <a href="{% url 'entry-update' entry.id %}">✍️ Edit Diary Entry</a>
-    <a href="{% url 'entry-delete' entry.id %}">⛔ Delete Diary Entry</a>
-</p>
-{% endif %}
-<button class="btn btn-outline-primary back-button" style="text-decoration: none;"><a href="{% url 'entry-list' %}">Back to your Diary</a></button>
+        {% if request.user.is_authenticated and entry.user.pk == request.user.pk %}
+<div class="btn-group" role="group" aria-label="Basic example">
+    <a href="{% url 'entry-update' entry.id %}" class="btn btn-outline-primary">Edit Diary Entry</a>
+    <a href="{% url 'entry-delete' entry.id %}" class="btn btn-outline-danger">Delete Diary Entry</a>
+    {% endif %}
+    <a href="{% url 'entry-list' %}" class="btn btn-outline-success">Back to your Diary</a>
+  </div>
 </div>
 </div>
 </div>
