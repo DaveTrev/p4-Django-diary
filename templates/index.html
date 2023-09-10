@@ -14,13 +14,14 @@
   <div class="container-fluid py-5">
     <h1 class="display-5 fw-bold">EYE<sub>|contribute</sub></h1>
     <p class="col-md-8 fs-4" class="intro">A virtual CPD diary for the Optometrist and Dispensing Optician</p>
-    <button class="btn btn-primary btn-lg" type="button"><a aria-current="page" class="no-underline" href="{% url 'entry-list' %}">Log Your Cpd learning here</a></button>
   </div>
 </div>
 
   <!-- START THE FEATURETTES -->
- <a aria-current="page" href="{% url 'account_signup' %}"><button type="button" class="btn btn-outline-primary" >New user? Register today</button>
-    <hr></a> 
+<button type="button" class="btn btn-outline-primary" ><a aria-current="page" href="{% url 'entry-list' %}">Log Your Cpd learning here</a></button>
+<button type="button" class="btn btn-outline-secondary" ><a aria-current="page" href="{% url 'account_signup' %}">New user? Register today</a></button>
+  
+  <hr> 
   <div class="row featurette">
     <div class="col-md-7">
       <h2 class="featurette-heading fw-normal lh-1">Demonstrate dedication to your profession.</h2>

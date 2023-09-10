@@ -52,14 +52,6 @@ p {
     color: rgb(53, 52, 52);
 }
 
-em {
-    font-style: normal;
-    font-weight: bold;
-}
-
-.no-underline {
-  text-decoration: none;
-}
 
 /* Form */
 
@@ -139,19 +131,7 @@ input[type="submit"] {
 /*Bootstap layout faq */
 .text-primary {
     color:  #084298!important;
-}
-
-
-/* bootstrap carosel example */
-/* GLOBAL STYLES
--------------------------------------------------- */
-/* Padding below the footer and lighter body text */
-
-body {
-    padding-bottom: 3rem;
-    color: rgb(var(--bs-tertiary-color-rgb));
-  }
-  
+}  
   
   /* Featurettes
   ------------------------- */
@@ -243,7 +223,6 @@ body {
       .btn-bd-primary {
         --bd-violet-bg: #712cf9;
         --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
-
         --bs-btn-font-weight: 600;
         --bs-btn-color: var(--bs-white);
         --bs-btn-bg: var(--bd-violet-bg);
