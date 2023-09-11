@@ -333,7 +333,19 @@ reinstated code, as could not migrate, to return to this bug!!
 styling impacting view on mobile, timespent field, too small
 footer is covering save/cancel options for user
 
-alert messages not displaying
+alert messages not displaying (mispelling)
+
+Testing with 
+input Date vs auto date
+
+Used it on my phone.
+Worked really well...well done you!
+
+Feedback
+I put in my name as username then set up my passwords.
+When I tried to move on, my user name was rejected as I had a space in it and my passwords were deleted. I would have liked to have known in advance that I could not have spaces in my user name.
+When entering a new event, the box beside time has e.g. in it. You cannot see anymore detail.
+Small details from a grouchy customer...basically, very impressive!
 
 CORU LINKS ON CPD 
 https://www.coru.ie/health-and-social-care-professionals/education/continuing-professional-development/cpd-audit/
