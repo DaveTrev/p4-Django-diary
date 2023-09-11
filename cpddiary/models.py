@@ -9,7 +9,8 @@ def validate_positive_decimal(value):
     if value < 0.5:
         raise ValidationError("Value must be greater than or equal to 0.5")
 
-# change validators to min value 0.5 explain on form 
+# change validators to min value 0.5 explain on form
+# database throwing error when removing function
 # what that means and link to about page
 
 
