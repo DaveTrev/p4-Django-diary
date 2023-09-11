@@ -23,10 +23,25 @@ class EntryForm(forms.ModelForm):
             'practiceImpact': {
                 'required': 'Please enter the impact on your practice.'
             },
+            'cpdCredits': {
+                'required': 'Please enter the amount of CPD claimed.'
+            },
         }
 
         widgets = {
-            'title': forms.TextInput(attrs={'required': True}),
-            'timeSpent': forms.Textarea(attrs={'placeholder': 'e.g. 3 hours',
-                                               'rows': 1, 'cols': 2})
+            'title': forms.TextInput(attrs={'required': True, 'placeholder':
+                                     'Enter a Title'}),
+            'learningOutcome': forms.Textarea(
+                attrs={'required': True,
+                       'placeholder': 'Enter details on your learning.'}),
+            'activityType': forms.Textarea(
+                attrs={'required': True,
+                       'placeholder': 'Enter the type of activity.'}),
+            'practiceImpact': forms.Textarea(
+                attrs={'required': True,
+                       'placeholder':
+                       'Enter details on the impact on your practice.'}),
+            'timeSpent': forms.Textarea(
+                attrs={'required': True,
+                       'placeholder': 'e.g. 3 hours', 'rows': 1, 'cols': 2})
         }
