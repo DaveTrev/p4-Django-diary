@@ -34,24 +34,24 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active text-black" aria-current="page" href="{% url 'home' %}">Home</a>
+              <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active text-black" aria-current="page" href="{% url 'entry-list' %}">My Diary</a>
+              <a class="nav-link active" aria-current="page" href="{% url 'entry-list' %}">My Diary</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-black" href="{% url 'about' %}">About</a>
+              <a class="nav-link" href="{% url 'about' %}">About</a>
             </li>
             {% if request.user.is_authenticated %}
             <li class="nav-item">
-              <a class="nav-link text-black" href="{% url 'account_logout' %}">Logout</a>
+              <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
             </li>
             {% else %}
             <li class="nav-item">
-              <a class="nav-link text-black" href="{% url 'account_signup' %}">Register</a>
+              <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-black" href="{% url 'account_login' %}">Login</a>
+              <a class="nav-link" href="{% url 'account_login' %}">Login</a>
             </li>
             {% endif %}
           </ul>
@@ -79,7 +79,6 @@
       </div>
   </div>
   {% endif %}
-
   </header>
 
 
@@ -104,16 +103,10 @@
   <footer class="footer h-5 mt-auto" style="background-color: #d8e1e7;">
     <p class="m-0 text-center text-black">Made by DaveTrev</p>
     <p class="m-0 text-center text-black">This website is used for educational purposes only</p>
-    <p class="m-0 text-center text-black">Follow us: <i class="fab fa-facebook-square ms-3"></i>
-      <i class="fa-brands fa-x-twitter"></i> <!-- create links to socials -->
-      <i class="fab fa-instagram-square ms-3"></i> <!-- create links to socials -->
-      <i class="fab fa-youtube-square ms-3"></i></p> <!-- create links to socials -->
-
-    <!-- create links to important links -->
-    <!-- create links to important links IADO -->
-    <!-- create links to important links Coru -->
-    <!-- create links to important links AOI -->
-
+    <p class="m-0 text-center text-black">Follow us: <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-square ms-3"></i></a>
+      <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram-square ms-3"></i></a>
+      <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube-square ms-3"></i></a>
+      </p> 
   </footer>
 
   <!-- JS script for timing messages to user goes here! -->
