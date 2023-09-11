@@ -24,6 +24,7 @@ class EntryForm(forms.ModelForm):
                 'required': 'Please enter the impact on your practice.'
             },
         }
+
         widgets = {
             'title': forms.TextInput(attrs={'required': True}),
             'timeSpent': forms.Textarea(attrs={'placeholder': 'e.g. 3 hours',
