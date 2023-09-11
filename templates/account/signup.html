@@ -5,6 +5,7 @@
 {% block head_title %}{% trans "Signup" %}{% endblock %}
 
 {% block content %}
+<div class="col-md-6 col-lg-4 mb-4">
 <h1>{% trans "Sign Up" %}</h1>
 
 <p>{% blocktrans %}Already have an account? Then please {% endblocktrans %}<a href="{% url 'account_login' %}">sign in</a>.</p>
@@ -17,5 +18,5 @@
   {% endif %}
   <button  class="btn btn-outline-success" type="submit">{% trans "Sign Up" %} &raquo;</button>
 </form>
-
+</div>
 {% endblock %}
