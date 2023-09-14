@@ -96,6 +96,9 @@ https://stackoverflow.com/questions/64618631/how-to-filter-and-paginate-in-listv
 form validation - dark hamster
 https://www.dark-hamster.com/application/how-to-display-form-error-in-django/
 
+crispy forms how to 
+https://www.youtube.com/watch?v=MZwKoi0wu2Q&t=369s
+
 unsplash images for index page
 https://unsplash.com/photos/wpi3sDUrSEk
 https://unsplash.com/photos/G1iYCeCW2EI
