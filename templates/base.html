@@ -112,6 +112,13 @@
 
   <!-- JS script for timing messages to user goes here! -->
   <script>
+    setTimeout(function () {
+        let messages = document.getElementById('msg');
+        let alert = new bootstrap.Alert(messages);
+        alert.close();
+    }, 2500);
+</script>
+  <!--<script>
     window.addEventListener('load', function () {
       var welcomeMessage = document.getElementById('welcome-message');
       setTimeout(function () {
@@ -119,7 +126,7 @@
         welcomeMessage.style.transition = 'opacity 1s';
       }, 2500); // 2500 milliseconds = 2.5 seconds
     });
-  </script>
+  </script>-->
 </body>
 
 </html>
