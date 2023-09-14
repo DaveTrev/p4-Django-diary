@@ -325,6 +325,87 @@ extending base
 
 forms.py, custom alerts written
 alerts not happening?
+removing 'cpdCredits': forms.DecimalField(
+                label='CPD Credits',
+                widget=forms.NumberInput(attrs={
+                    'class': 'form-control',
+                    'placeholder': 'Enter CPD Credits'}),
+                validators=[MinValueValidator(0)]),
+
+
+        widgets = {
+            'title': forms.TextInput(attrs={'class': 'form-control',
+                                            'required': True, 'placeholder':
+                                            'Enter a Title'}),
+            'learningOutcome': forms.Textarea(
+                attrs={'class': 'form-control', 'required': True,
+                       'placeholder': 'Enter details on your learning.'}),
+            'activityType': forms.Textarea(
+                attrs={'class': 'form-control', 'required': True,
+                       'placeholder': 'Enter the type of activity.'}),
+            'practiceImpact': forms.Textarea(
+                attrs={'class': 'form-control', 'required': True,
+                       'placeholder':
+                       'Enter details on the impact on your practice.'}),
+            'timeSpent': forms.TextInput(
+                attrs={'class': 'form-control', 'required': True,
+                       'placeholder': 'e.g. 3 hours',  'rows': 1, 'cols': 2}),
+            'cpdCredits': forms.NumberInput(
+                attrs={'class': 'form-control', 'required': True,
+                       'placeholder': 'Enter CPD Credits Claimed'}
+            ),
+        }
+
+
+    def __init__(self, *args, **kwargs):
+        super(EntryForm, self).__init__(*args, **kwargs)
+        self.helper = FormHelper()
+        self.helper.form_class = 'form-control'
+        self.helper.layout = Layout(
+            Field('title', placeholder='Enter a Title', rows=1, cols=2),
+            Field('learningOutcome',
+                  placeholder='Enter details on your learning.'),
+            Field('activityType', placeholder='Enter the type of activity.'),
+            Field('practiceImpact',
+                  placeholder='Enter details on the impact on your practice.'),
+            Field('timeSpent', placeholder='e.g. 3 hours'),
+            Field('cpdCredits', placeholder='Enter CPD Credits Claimed')
+        )
+        self.helper.form_method = 'post'
+
+            <!--https://getbootstrap.com/docs/4.0/components/forms/-->
+    <div class ="form-group">
+    <div class="form-group">
+        <label for="{{ form.title.id_for_label }}">Title:</label>
+        {{ form.title }}
+        {{ form.title.errors }}
+    </div>
+    <div class="form-group">
+        <label for="{{ form.learningOutcome.id_for_label }}">Learning Outcome:</label>
+        {{ form.learningOutcome }}
+        {{ form.learningOutcome.errors }}
+    </div>
+    <div class="form-group">
+        <label for="{{ form.activityType.id_for_label }}">Activity Type:</label>
+        {{ form.activityType }}
+        {{ form.activityType.errors }}
+    </div>
+    <div class="form-group">
+        <label for="{{ form.timeSpent.id_for_label }}">Time Spent:</label>
+        {{ form.timeSpent }}
+        {{ form.timeSpent.errors }}
+    </div>
+    <div class="form-group">
+        <label for="{{ form.cpdCredits.id_for_label }}">CPD Credits:</label>
+        {{ form.cpdCredits }}
+        {{ form.cpdCredits.errors }}
+    </div>
+    <div class="form-group">
+        <label for="{{ form.practiceImpact.id_for_label }}">Practice Impact:</label>
+        {{ form.practiceImpact }}
+        {{ form.practiceImpact.errors }}
+    </div>
+    <input type="submit" value="Save">
 
 
 removed validate positive decimal
@@ -337,6 +418,14 @@ styling impacting view on mobile, timespent field, too small
 footer is covering save/cancel options for user
 
 alert messages not displaying (mispelling)
+
+BUG TITLE FIELD NOT DISPLAYING ALERT?
+
+installed crispy forms 
+had errors, looking for uni forms?
+TemplateDoesNotExist at /create/
+bootstrap4/uni_form.html
+
 
 Testing with 
 input Date vs auto date

@@ -1,5 +1,8 @@
 from django import forms
 from .models import Entry
+from django.core.validators import MinValueValidator
+from crispy_forms.helper import FormHelper
+from crispy_forms.layout import Layout, Field
 
 
 class EntryForm(forms.ModelForm):
@@ -29,19 +32,24 @@ class EntryForm(forms.ModelForm):
         }
 
         widgets = {
-            'title': forms.TextInput(attrs={'required': True, 'placeholder':
-                                     'Enter a Title'}),
+            'title': forms.TextInput(attrs={'class': 'form-control',
+                                            'required': True, 'placeholder':
+                                            'Enter a Title'}),
             'learningOutcome': forms.Textarea(
-                attrs={'required': True,
+                attrs={'class': 'form-control', 'required': True,
                        'placeholder': 'Enter details on your learning.'}),
             'activityType': forms.Textarea(
-                attrs={'required': True,
+                attrs={'class': 'form-control', 'required': True,
                        'placeholder': 'Enter the type of activity.'}),
             'practiceImpact': forms.Textarea(
-                attrs={'required': True,
+                attrs={'class': 'form-control', 'required': True,
                        'placeholder':
                        'Enter details on the impact on your practice.'}),
-            'timeSpent': forms.Textarea(
-                attrs={'required': True,
-                       'placeholder': 'e.g. 3 hours', 'rows': 1, 'cols': 2})
+            'timeSpent': forms.TextInput(
+                attrs={'class': 'form-control', 'required': True,
+                       'placeholder': 'e.g. 3 hours',  'rows': 1, 'cols': 2}),
+            'cpdCredits': forms.NumberInput(
+                attrs={'class': 'form-control', 'required': True,
+                       'placeholder': 'Enter CPD Credits Claimed'}
+            ),
         }
