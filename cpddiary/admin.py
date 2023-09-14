@@ -3,3 +3,4 @@ from .models import Entry
 
 
 admin.site.register(Entry)
+
