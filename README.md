@@ -13,28 +13,6 @@
 
 **Developed by: David Trevaskis**
 
-- [EyeContribute Diary](#EyeContribute-diary)
-  - [Table of Content](#table-of-content)
-  - [Introduction](#introduction)
-    - [Project Goals](#project-goals)
-    - [Data Base Design](#data-base-design)
-   - [User Experience - UX](#user-experience)
-   - [User Stories](#user-stories)
-   - [Agile Methodology](#agile-methodology)
-   - [The Scope](#the-scope)
-  - [Agile Development](#agile-development)
-  - [Existing Features](#existing-features)
-  - [Future Features](#future-features)
-  - [Technologies Used](#technologies-used)
-    - [Languages](#languages)
-    - [Python Modules \& Packages](#python-modulespackages-used)
-    - [Frameworks \& Tools](#frameworks--tools)
-  - [Testing and Validation](#testing-and-validation)
-  - [Deployment \& Development](#deployment--development)
-  - [Credits](#credits)
-    - [Media](#media)
-    - [Code](#code)
-  - [Acknowledgements](#acknowledgements)
 
 
 ## Introduction
@@ -104,6 +82,28 @@ In the future, the developer would like to add additional models, a custom user 
 
 As part of the entry model, the developer would like to add an additional feature of uploading supporting documents to the diary database, to provide evidence and reference for the user.
 
+
+## Agile Methodology
+
+
+The Agile Methodology was used to plan this project. This was implemented through Github and the Project Board which can be seen here -
+
+[Project Board Link](https://github.com/users/DaveTrev/projects/3)
+
+![Kanban](static/Media/kanban.png)
+
+
+Through the use of the Kanban board in the projects view in Github, the project was divided into a few different sections:
+
+* To do
+* In Progress
+* Done
+* Future Updates
+
+User Stories and any other project-related fixes or updates were created using Github issues.
+
+8 enhancement features or features I would liek to add were not completed and left as Future updates to complete.
+
 ## User Stories
 
 * As a website user, I can:
@@ -118,26 +118,6 @@ As part of the entry model, the developer would like to add an additional featur
 2. As a "site user" I can edit the diary entries
 3. As a "site user" I can see the previous entries made
 4. As a "site user" I can delete the diary entries
-
-## Agile Methodology
-
-
-The Agile Methodology was used to plan this project. This was implemented through Github and the Project Board which can be seen here -
-
-[Project Board Link](https://github.com/users/DaveTrev/projects/3)
-
-![Kanban](static/Media/kanban.png)
-
-
-Through the use of the Kanban board in the projects view in Github, the project was divided into a few different sections:
-* To do
-* In Progress
-* Done
-* Future Updates
-
-User Stories and any other project-related fixes or updates were created using Github issues.
-
-8 enhancement features or features I would liek to add were not completed and left as Future updates to complete.
 
 **Epic 1: User Authentication**
 
@@ -231,8 +211,56 @@ User Stories and any other project-related fixes or updates were created using G
 
 -   User Story 19: Set up a Kanban board to track project tasks.
 
+#### Target Audience
+The target audience is a Dispensing Optician or Optometrist who wants to keep a record of their learning, experiences and impressions of their learning in a succinct form. This site / app is used to keep all records in a easy to use format, accessable on mobile or desktop.
+
+#### User Requirements and Expectations
+
+- An easy-to-use navigation system and layout.
+- Simple access to all of the site's features.
+- All features and links operate as intended.
+- Instant feedback on performance while using site features.
+- An attractive responsive design.
+– Accessibility.
+
+**Easy and Clear User Interface**
+
+- Check that the navigation menu is simple to use and operates as intended.
+- Check that the page names correspond to the expected content.
+- Assist the user in exploring the site's capabilities by providing visual feedback.
+- Design something that reflects the page's purpose.
+
+**Relevant information**
+
+- Include information about the site's intent to help users understand it.
+
+**Principal Website Functions**
+
+- Add a log-in feature that enables user interaction with the website.
+- Add the registration, login, and logout features so users can access the essential site features.
+- Create a form to add entries to the log.
+- Add the ability to modify and delete log entries.
+
+**Responsiveness**
+
+- Use responsive design for seamless access on desktop, tablet, and mobile devices.
 
 
+## Structure
+
+The website is divided into 3 pages with content depending on whether the user is authenticated or not.
+
+- **Home Page** is visible to both types of users.  it will feature a call to action to register or login to access the site. Unauthenticated users will also see a banner calling them to register
+- **Register Page** allows the user to create an account to access the core functionality of the site.
+- **Login/Logout Pages** allow the user to authenticate or log out of their account.
+- **Add Diary Entry Page** allows an authenticated user to add a log entry to their Diary.
+- **User Entries Page** allows authenticated user to see all their entrys, the date they were made and the associated cpd points claimed.
+- **Diary Entry Detail Page** allows the user to view all the details of the relevant CPD diary entry , if they are authenticated and it is their post they will see buttons that allow them to access the edit or delete features. 
+- **About Page** allows an authenticated or Unauthenticated user to read more on CPD requirements and access links to relevant professional bodies for further reading
+
+### Surface
+
+#### Color Scheme
 
 
 
