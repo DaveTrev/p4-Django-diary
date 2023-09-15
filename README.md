@@ -1,3 +1,255 @@
+# Eye|Contribute - CPD Diary
+(Developer: David Trevaskis)
+
+![Mockup image](static/Media/amiresponsive.png)
+
+**Live Site:**
+
+[Live webpage](https://cpddiary-bd5599156530.herokuapp.com/)
+
+**Link to Repository:**
+
+[Repository](https://github.com/DaveTrev/p4-Django-diary)
+
+**Developed by: David Trevaskis**
+
+- [EyeContribute Diary](#EyeContribute-diary)
+  - [Table of Content](#table-of-content)
+  - [Introduction](#introduction)
+    - [Project Goals](#project-goals)
+    - [Data Base Design](#data-base-design)
+   - [User Experience - UX](#user-experience)
+   - [User Stories](#user-stories)
+   - [Agile Methodology](#agile-methodology)
+   - [The Scope](#the-scope)
+  - [Agile Development](#agile-development)
+  - [Existing Features](#existing-features)
+  - [Future Features](#future-features)
+  - [Technologies Used](#technologies-used)
+    - [Languages](#languages)
+    - [Python Modules \& Packages](#python-modulespackages-used)
+    - [Frameworks \& Tools](#frameworks--tools)
+  - [Testing and Validation](#testing-and-validation)
+  - [Deployment \& Development](#deployment--development)
+  - [Credits](#credits)
+    - [Media](#media)
+    - [Code](#code)
+  - [Acknowledgements](#acknowledgements)
+
+
+## Introduction
+
+
+Introduction
+
+Eye|Contribute Cpd Diary is a simple online diary to log continued education for Dispensing Opticians and Optometrists in Ireland. Under the regulatory body CORU, each member must keep a diary of all learning carried out in a year.
+
+On registration with Eye|Contribute, it allows each user to create a personal journal of their learning activities and track their cpd credits in a easy to follow centralised manner.
+Each diary entry, covers the information required by CORU, such as time spent and activities undertaken.
+
+Users can set up an account that allows them to add, edit and delete entries. 
+The project was designed as the 4th portfolio project of the Code Institutes Full Stack Diploma Program. It was built using
+
+-   Django
+    
+-   Python
+    
+-   Js
+    
+-   CSS
+    
+-   HTML
+    
+-   Postgresql
+
+### Project Goals
+
+The goal of the project was to fulfil a need (and want) in my life as a Dispensing Optician, to build an easy to use online diary for logging continued learning for optical professionals.
+Each diary entry must have the correct layout as required by the regulations set out by CORU.
+The site allows users to register and create private diary entries, the purpose, to collate and log all learning undertaken in a simple to use digital diary.
+Each diary enter is private to that specific user, only they can create, edit or delete entries.
+My main objective was to make this  as mobile friendly as possible, enabling users to log conversations, topics they have encountered on their day in practice easily. 
+
+### Data Base Design
+
+The Entity Relationship Diagram (ERD) shows the database's structure, which is essential to this site's functionality:
+
+![ERD](static/Media/erd(no_background).png)
+
+A User Model is provided by Django, Allauth is used to handle registration and user authentication. The custom model "Entry" is used to log entries to the CPD diary.
+
+The fields required by the Entry model is as follows.
+
+-   Date (Automatically generated from the day of entry)
+    
+-   Title
+    
+-   Learning outcome
+    
+-   Activity type
+    
+-   Cpd credits
+    
+-   Time spent
+    
+-   Impact on practice.
+
+A `User` Model is provided by Django, and the `Entry Model` stores the details of users CPD diary entries. The user can add many additions to their diary, in order to store notes to refer back to should they need it. 
+
+The `Entry` model is based on the personal diary walkthrough project by Real Python. However, the models were significantly altered to fit the needs of this project. The `Entry` model has added fields of 'Learning Outcome', 'Activity Type, 'Time Spent', 'Cpd Credits' and 'Practice Impact'. 
+
+**Future Models**
+
+In the future, the developer would like to add additional models, a custom user profile, allowing users to tailor their personal details on the site.
+
+As part of the entry model, the developer would like to add an additional feature of uploading supporting documents to the diary database, to provide evidence and reference for the user.
+
+## User Stories
+
+* As a website user, I can:
+
+1. As a "site user " I can register on "the site" to access features and diary.
+2. As a "site user" I can see multiple options to register for the site and what its use it.
+3. As a "site user " I read up on what is required with logging CPD.
+
+* As an authenticated website user, I can:
+
+1. As a "site user " I can create a new diary entry in the cpd log
+2. As a "site user" I can edit the diary entries
+3. As a "site user" I can see the previous entries made
+4. As a "site user" I can delete the diary entries
+
+## Agile Methodology
+
+
+The Agile Methodology was used to plan this project. This was implemented through Github and the Project Board which can be seen here -
+
+[Project Board Link](https://github.com/users/DaveTrev/projects/3)
+
+![Kanban](static/Media/kanban.png)
+
+
+Through the use of the Kanban board in the projects view in Github, the project was divided into a few different sections:
+* To do
+* In Progress
+* Done
+* Future Updates
+
+User Stories and any other project-related fixes or updates were created using Github issues.
+
+8 enhancement features or features I would liek to add were not completed and left as Future updates to complete.
+
+**Epic 1: User Authentication**
+
+-   User Story 1: As a site user, I want to register on the site to access features and the diary.
+    
+    -   Task 1: Install Allauth
+    -   Task 2: Style registration and login pages
+    -   Task 3: Implement user registration functionality
+  
+
+**Epic 2: Diary Entry Management**
+
+-   User Story 2: As a site user, I want to create a new diary entry in the CPD log.
+    
+    -   Task 1: Create the diary entry form
+    -   Task 2: Implement diary entry creation functionality
+
+-   User Story 3: As a site user, I want to edit my diary entries.
+    
+    -   Task 1: Create the diary entry editing page
+    -   Task 2: Style the diary entry editing page
+    -   Task 3: Implement diary entry editing functionality
+
+-   User Story 4: As a site user, I want to see my previous diary entries.
+    
+    -   Task 1: Create a page to display previous diary entries
+    -   Task 2: Style the diary entry display page
+    -   Task 3: Implement functionality to fetch and display previous entries
+
+**Epic 3: Site Navigation**
+
+-   User Story 5: As a user, I want clear navigation to find the information I need.
+    -   Task 1: Create a responsive navigation bar using Bootstrap
+    -   Task 2: Add relevant links to the navigation bar
+    -   Task 3: Test the navigation bar's responsiveness
+    -   Task 4: Adjust the navigation bar for logged-in users
+
+**Epic 4: Error Handling**
+
+-   User Story 6: As a developer, I want to create status error templates to secure views and notify users of issues.
+    -   Task 1: Create 404, and 500 error pages extending from Base.html
+    -   Task 2: Style the error pages
+
+**Epic 5: Documentation**
+
+-   User Story 7: As a developer, I want to create documentation for fellow developers.
+    -   Task 1: Write a site overview
+    -   Task 2: Write a table of contents
+    -   Task 3: Write sections for the table of contents
+    -   Task 4: Create GIFs/screenshots of the site
+
+**Epic 8: Testing**
+
+-   User Story 8: As a developer, I want to create TESTING.md files.
+
+    -   Task 1: Complete HTML, CSS, JS, and Python validation
+    -   Task 2: Complete manual testing
+    -   Task 3: Create screenshots for TESTING.md
+
+**Epic 9: Deployment**
+
+-   User Story 9: As a developer, I want to set up Django and deploy the project on Heroku.
+    -   Task 1: Install Django
+    -   Task 2: Create project
+    -   Task 3: Create environment variables and secure them in env.py
+    -   Task 4: Create an app on Heroku
+    -   Task 5: Edit config vars
+    -   Task 6: Link Heroku to the GitHub repository
+
+**Epic 10: Site Design**
+
+-   User Story 10: As a developer, I want to design a visually appealing homepage.
+    -   Task 1: Design the homepage to match the site theme
+
+**Epic 11: User Management**
+-   User Story 11: As a developer, I want to provide account/profile creation functionality.
+
+    -   Task 1: Using AllAuth, handle user registration
+    -   Task 2: Implement user registration, login, and logout functionality
+
+-   User Story 17: As a user, I want to sign up, log in, and log out to access features available to registered users.
+    
+    -   Task 1: Style signup, login, and logout pages
+    -   Task 2: Implement user authentication functionality
+
+**Epic 13: Footer**
+
+-   User Story 18: Create a footer containing social links to the developer.
+
+**Epic 14: Kanban Board**
+
+-   User Story 19: Set up a Kanban board to track project tasks.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Continuing Professional Development Diary
 
 
@@ -109,6 +361,8 @@ https://unsplash.com/photos/57USw1-h50k
 broken glasses - https://unsplash.com/photos/jgPcjw2tBVc
 
 used https://cleanup.pictures/ to remove pencil from picture
+
+cropping images https://www.iloveimg.com/crop-image
 
 Code Institute - codestar blog / I think therefore I blog lessons
 
