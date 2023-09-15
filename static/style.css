@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Alike+Angular&display=swap');
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 14px;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin-bottom: 4rem; 
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin-bottom: 4rem;
 }
 
 main {
@@ -18,24 +18,25 @@ main {
 }
 
 a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 h1 {
-    font-size: 3em;
+  font-size: 3em;
 }
 
 h1 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
-h2, h3 {
-    font-size: 1.5em;
-    margin: 0;
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    vertical-align: top;
+h2,
+h3 {
+  font-size: 1.5em;
+  margin: 0;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  vertical-align: top;
 }
 
 #intro {
@@ -43,21 +44,26 @@ h2, h3 {
 }
 
 .datefield {
-    background-color: gainsboro;
+  background-color: #dcdcdc;
 }
+
 .mark a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 article {
-    margin-bottom: 2.0rem;
+  margin-bottom: 2.0rem;
+}
+
+article.text-center {
+  padding-bottom: 20px;
 }
 
 p {
-    font-size: 1.2em;
-    padding-left: 1rem;
-    line-height: 1.3em;
-    color: rgb(53, 52, 52);
+  font-size: 1.2em;
+  padding-left: 1rem;
+  line-height: 1.3em;
+  color: #353434;
 }
 
 .footer {
@@ -68,170 +74,175 @@ p {
 /* Form */
 
 label {
-    display: block;
+  display: block;
 }
 
 .back-button {
-text-decoration: none;
+  text-decoration: none;
 }
 
 button,
 textarea,
 input {
-    font-size: inherit;
-    min-height: 2.5em;
-    padding: 0 1rem;
-    text-decoration: none;
+  font-size: inherit;
+  min-height: 2.5em;
+  padding: 0 1rem;
+  text-decoration: none;
 }
 
 input[type="text"],
 textarea {
-    width: 100%;
+  width: 100%;
 }
 
 textarea {
-    padding: 0.5rem 1rem;
-    font-family: sans-serif;
+  padding: 0.5rem 1rem;
+  font-family: sans-serif;
 }
 
 button,
 input[type="submit"] {
-    margin: 0 1rem 2px 1rem;
-    cursor: pointer;
-    font-weight: bold;
-    min-width: 8rem;
+  margin: 0 1rem 2px 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  min-width: 8rem;
 }
 
- /* Navbar
+/* Navbar
   ------------------------- */
- 
+
 /* cpd entry form styling */
 .cpd-entry {
-    background-color: #bbcff09f;
-    padding: 26px;
-    font-size: 20px;
-    padding-top: 10px;
-  }
-  .cpd-entry header {
-    padding-top: 2px;
-    margin-bottom: 14px;
-  }
-  .cpd-entry ul {
-    list-style: circle;
-    margin: 0;
-    padding: 0;
-  }
-  .cpd-entry li {
-    margin-bottom: 10px;
-  }
+  background-color: #bbcff09f;
+  padding: 26px;
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+.cpd-entry header {
+  padding-top: 2px;
+  margin-bottom: 14px;
+}
+
+.cpd-entry ul {
+  list-style: circle;
+  margin: 0;
+  padding: 0;
+}
+
+.cpd-entry li {
+  margin-bottom: 10px;
+}
 
 /*Bootstap layout faq */
 .text-primary {
-    color:  #084298!important;
-}  
-  
-  /* Featurettes
+  color: #084298 !important;
+}
+
+/* Featurettes
   ------------------------- */
-  
-  .featurette-divider {
-    margin: 5rem 0; /* Space out the Bootstrap <hr> more */
-  }
-  
-  /* Thin out the marketing headings */
-  /* rtl:begin:remove */
-  .featurette-heading {
-    letter-spacing: -.05rem;
-  }
-  
-  /* rtl:end:remove */
-  
-  /* RESPONSIVE CSS
+
+.featurette-divider {
+  margin: 5rem 0;
+  /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+/* rtl:begin:remove */
+.featurette-heading {
+  letter-spacing: -.05rem;
+}
+
+/* rtl:end:remove */
+
+/* RESPONSIVE CSS
   -------------------------------------------------- */
-  
-  @media (min-width: 40em) {
-    /* Bump up size of carousel content */
-  
-    .featurette-heading {
-      font-size: 50px;
-    }
+
+@media (min-width: 40em) {
+  /* Bump up size of carousel content */
+
+  .featurette-heading {
+    font-size: 50px;
   }
-  
-  @media (min-width: 62em) {
-    .featurette-heading {
-      margin-top: 7rem;
-    }
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
   }
+}
 
 
 /* Jumbotron example syling*/
 
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
 
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
 
-      .b-example-divider {
-        width: 100%;
-        height: 3rem;
-        background-color: rgba(0, 0, 0, .1);
-        border: solid rgba(0, 0, 0, .15);
-        border-width: 1px 0;
-        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-      }
+.b-example-divider {
+  width: 100%;
+  height: 3rem;
+  background-color: rgba(0, 0, 0, .1);
+  border: solid rgba(0, 0, 0, .15);
+  border-width: 1px 0;
+  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
 
-      .b-example-vr {
-        flex-shrink: 0;
-        width: 1.5rem;
-        height: 100vh;
-      }
+.b-example-vr {
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 100vh;
+}
 
-      .bi {
-        vertical-align: -.125em;
-        fill: currentColor;
-      }
+.bi {
+  vertical-align: -.125em;
+  fill: currentColor;
+}
 
-      .nav-scroller {
-        position: relative;
-        z-index: 2;
-        height: 2.75rem;
-        overflow-y: hidden;
-      }
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+}
 
-      .nav-scroller .nav {
-        display: flex;
-        flex-wrap: nowrap;
-        padding-bottom: 1rem;
-        margin-top: -1px;
-        overflow-x: auto;
-        text-align: center;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-      }
+.nav-scroller .nav {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  text-align: center;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
 
-      .btn-bd-primary {
-        --bd-violet-bg: #712cf9;
-        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
-        --bs-btn-font-weight: 600;
-        --bs-btn-color: var(--bs-white);
-        --bs-btn-bg: var(--bd-violet-bg);
-        --bs-btn-border-color: var(--bd-violet-bg);
-        --bs-btn-hover-color: var(--bs-white);
-        --bs-btn-hover-bg: #6528e0;
-        --bs-btn-hover-border-color: #6528e0;
-        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-        --bs-btn-active-color: var(--bs-btn-hover-color);
-        --bs-btn-active-bg: #5a23c8;
-        --bs-btn-active-border-color: #5a23c8;
-      }
-      .bd-mode-toggle {
-        z-index: 1500;
-      }
+.btn-bd-primary {
+  --bd-violet-bg: #712cf9;
+  --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+  --bs-btn-font-weight: 600;
+  --bs-btn-color: var(--bs-white);
+  --bs-btn-bg: var(--bd-violet-bg);
+  --bs-btn-border-color: var(--bd-violet-bg);
+  --bs-btn-hover-color: var(--bs-white);
+  --bs-btn-hover-bg: #6528e0;
+  --bs-btn-hover-border-color: #6528e0;
+  --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+  --bs-btn-active-color: var(--bs-btn-hover-color);
+  --bs-btn-active-bg: #5a23c8;
+  --bs-btn-active-border-color: #5a23c8;
+}
+
+.bd-mode-toggle {
+  z-index: 1500;
+}
