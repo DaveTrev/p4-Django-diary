@@ -260,12 +260,129 @@ The website is divided into 3 pages with content depending on whether the user i
 
 ### Surface
 
-#### Color Scheme
+#### Colour Scheme
+
+The site is designed to light on images, I wanted to keep a very clean / professional approach to the site design, to try and ensure quick page loads and unobtrusive site navigation.
+
+In general, the colour palette is kept in relatively neutral so it lets the features of the site stand out and not distract the user
+
+![Color Scheme](static/Media/colour_palette.png)
+
+#### Font
+
+For lengthy texts like those found in books, magazines, and webpages, Times New Roman is a great choice because of its high readability.
+Times New Roman is a serif typeface. Serif fonts are frequently connected to tradition, authority, formality, and comfort.
+Times New Roman's narrow shape makes it possible to fit more text per page, which is primarily why businesses choose it.
+Times New Roman's use in academic papers and official documents, as well as its relationship with tradition and authority, can assist a website project a sense of competence and professionalism.
+
+## Existing Features
+
+### Header and Navigation
+
+Navbar with logo, page name, links and search bar (for use with diary). Different links are visible for unauthenticated users and authenticated. Active links are rendered in black as opposed to the default grey. On small to medium screens the navigation links are displayed as a collapsible burger menu.
+
+![Header Desktop](static/Media/header-desk.png)
+![Header Mobile](static/Media/header-mobile.png)
+
+***
+***
 
 
+![Header Desktop (logged in)](static/Media/header-loggedin-desk.png)
+![Header Mobile (logged in)](static/Media/header-loggedin-mobile.png)
+
+### Footer
+
+- Footer with a copyright feature links to several of the developer's pages, and a notice that this is for educational use only.
+- Footer is similar on all screen sizes.
+
+![Footer Desktop](static/Media/footerdesk.png)
+![Footer Mobile](static/Media/footermobile.png)
+
+### Account Features
+
+**Create an account**
+
+- Allows a user to sign up
+- Fields include Username, Email (optional), Password, and Password confirmation
+
+![Sign-up](static/Media/sign-up.png)
+
+**Login to an account**
+
+- Allows a user to access their information
+
+![Sign-in](static/Media/sign-in.png)
+
+**Log out of an account**
+
+- Allows a user to exit their account
+
+![Sign-out](static/Media/sign-out.png)
 
 
+### Main Views
 
+**Home Page**
+The navbar will change if a user is logged in or not, the call to action of log in or register remain unchanged on the home page.
+The cards with images help to explain why the user may want to access the site.
+
+![Home page](static/Media/home-page.png)
+
+***
+***
+
+![Home page - Mobile](static/Media/home-pagemobile.png)
+
+**Entry List**
+The entry list / diary main view, lets users see previous entries, the date they were made and the points claimed. If enough entries are made the view will paginate.
+
+![Entry-List](static/Media/diarymainview.png)
+
+***
+***
+
+![Entry-List mobile](static/Media/diarymainviewmobile.png)
+
+**Entry Detail**
+On click into a diary entry, the user can see the details of their diary entry, from this page they can also access editing and deletion options.
+
+![Entry-detail](static/Media/diary-detail.png)
+
+***
+***
+
+![Entry-detail mobile](static/Media/diarydetailmobile.png)
+
+### CRUD Functionality
+
+All CRUD functionality is only available to registered users once they are logged in.
+
+**Log Entry form**
+The log entry form allows registered / logged in users (only) to post new diary entries
+
+![Entry-form](static/Media/cpdentry.png)
+
+***
+***
+
+![Entry-form mobile](static/Media/cpdentrymobile.png)
+
+
+**Edit Entry form**
+The Edit log entry form allows registered / logged in users to post edit previous diary entries
+
+![Entry-form](static/Media/editform.png)
+
+***
+***
+
+![Entry-form mobile](static/Media/editformmobile.png)
+
+**Delete a Log Entry**
+Permit the user to delete a record. When deleting an entry, the user will be asked to confirm their decision.
+
+![confirm delete](static/Media/deleterecord.png)
 
 
 

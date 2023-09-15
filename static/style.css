@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Alike+Angular&display=swap');
+
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Times New Roman', serif;
   font-size: 14px;
   display: flex;
   flex-direction: column;
