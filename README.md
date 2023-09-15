@@ -82,6 +82,12 @@ In the future, the developer would like to add additional models, a custom user 
 
 As part of the entry model, the developer would like to add an additional feature of uploading supporting documents to the diary database, to provide evidence and reference for the user.
 
+### Wireframe
+
+Initial Wireframes
+
+![Wireframes](static/Media/wireframe.png)
+
 
 ## Agile Methodology
 
@@ -324,6 +330,7 @@ Navbar with logo, page name, links and search bar (for use with diary). Differen
 ### Main Views
 
 **Home Page**
+
 The navbar will change if a user is logged in or not, the call to action of log in or register remain unchanged on the home page.
 The cards with images help to explain why the user may want to access the site.
 
@@ -335,6 +342,7 @@ The cards with images help to explain why the user may want to access the site.
 ![Home page - Mobile](static/Media/home-pagemobile.png)
 
 **Entry List**
+
 The entry list / diary main view, lets users see previous entries, the date they were made and the points claimed. If enough entries are made the view will paginate.
 
 ![Entry-List](static/Media/diarymainview.png)
@@ -345,6 +353,7 @@ The entry list / diary main view, lets users see previous entries, the date they
 ![Entry-List mobile](static/Media/diarymainviewmobile.png)
 
 **Entry Detail**
+
 On click into a diary entry, the user can see the details of their diary entry, from this page they can also access editing and deletion options.
 
 ![Entry-detail](static/Media/diary-detail.png)
@@ -359,6 +368,7 @@ On click into a diary entry, the user can see the details of their diary entry, 
 All CRUD functionality is only available to registered users once they are logged in.
 
 **Log Entry form**
+
 The log entry form allows registered / logged in users (only) to post new diary entries
 
 ![Entry-form](static/Media/cpdentry.png)
@@ -370,6 +380,7 @@ The log entry form allows registered / logged in users (only) to post new diary 
 
 
 **Edit Entry form**
+
 The Edit log entry form allows registered / logged in users to post edit previous diary entries
 
 ![Entry-form](static/Media/editform.png)
@@ -380,11 +391,189 @@ The Edit log entry form allows registered / logged in users to post edit previou
 ![Entry-form mobile](static/Media/editformmobile.png)
 
 **Delete a Log Entry**
+
 Permit the user to delete a record. When deleting an entry, the user will be asked to confirm their decision.
 
 ![confirm delete](static/Media/deleterecord.png)
 
 
+### Success Messages
+
+Every time a user carries out a function on the website, either as part of the account functionality or the CRUD functionality, a success message will be displayed confirming that the function was carried out successfully.
+
+## Future Features
+
+1. **Edit Profile** -
+Creating functionality to allow the user to customise their details, position, practice details, education, CORU no. etc
+
+2. **Upload Supporting documentation** -
+To give the users an option to upload images of notes / supporting documentation to add to their diary entries. 
+
+3. **Retrieve Password Feature** -
+For a more comprehensive user experience, a function that enables the user to recover or reset their password if they have lost or forgotten it should be added.
+
+4. **Google Login** -
+   Allowing users to register and log in using Google would add ease of use for the user.
+
+5. **Improve Search bar functionality ** -
+At the present the search bar is working but on deletion of text in the field, the diary list does not refresh
+
+6. **Collate CPD logs for a year to download ** -
+If called to show learning over a year, an option to download and print diary entries would provide greater functionality for the user.
+
+7. **A Contact form to organise learning days / Calendar for upcoming events** -
+Adding a page that allows a user (unregistered / registered) to contact the site admin to propose meetups / learning days.
+Adding to this page, a calendar to display events for the given month 
+
+## Technologies Used
+
+### Languages
+
+- HTML - used as the main language to set up the structure of the website.
+- CSS - used to customize the styling of the website.
+- JavaScript - used to manipulate the DOM on various pages.
+- Python - used to set up the core functionality of the site, such as models, and views.
+
+### Python Modules/Packages used:
+
+Several core packages were used, a few of the most important ones are listed here together with their functions:
+
+- django - high-level Python web framework used to develop this application/site.
+- psycopg2 - PostgreSQL database adapter for the Python programming language.
+- dj3-cloudinary-storage - facilitates integration with Cloudinary by implementing Django Storage API.
+- django-allauth - Integrated set of Django applications addressing authentication, registration, account management as well as 3rd party (social) account authentication.
+- crispy-boostrap4 - Bootstrap4 template pack for django-crispy-forms.
+
+### Frameworks & Tools
+
+- Django - used to set up the back-logic and user model on the website.
+- GitHub - used to host the source code of the website. Also contains the record of the Agile development framework set up to plan the project, using issues, milestones, and projects on GitHub.
+- Gitpod - used to write and develop the code for the website, and for committing and pushing code to GitHub.
+- Heroku - used for live website deployment.
+- Cloudinary - is a cloud storage solution for website media and other static files. It also allows for the manipulation and optimization of media delivery.
+- Bootstrap - used throughout the site for responsiveness, layout, and predefined style elements.
+- Wireframepro - used to create wire-frames of the site planning
+- Lucid Chart - used for creating the ERD.
+- Font Awesome - used for icon features on the site.
+- Canva - used to generate the color scheme.
+
+## Testing and Validation
+
+The testing documentation can be found at [TESTING.md](TESTING.md)
+
+## Deployment & Development
+
+### Deploy on Heroku
+
+**Requirement and Procfile**
+
+Before deployment on Heroku, two files need to be created and be up to date, a `requirements.txt` file and a `Procfile`.
+
+- The `requirements.txt` file is created by executing the following command in the terminal window: ` pip3 freeze --local > requirements.txt`. A file with all requirements will be created.
+- Then create a file named `Procfile` and insert the following code: `web: gunicorn worldtravels.wsgi`, with no empty lines after it.
+- Then make sure to push these files to your repository.
+
+**Creating Heroku App**
+
+- Log into Heroku and go to the Dashboard.
+- Click "New" and then select "Create new app".
+- Give your app a name and select the region closest to you.
+- Click "Create app" to confirm.
+
+**Creating a database**
+
+- Log into ElephantSQL.com and access your dashboard.
+- Click "Create New Instance"
+- Set up a plan, give your plan a **Name**, select the **Tiny Turtel (Free)** plan, leave the **Tags** field blank.
+- Select "Select Region" and select a data center new you.
+- Click "Review".
+- Confirm your details and then click "Create instance".
+- Return to the ElephantSQL dashboard and click on the database instance name for this project.
+- In the URL section, click the copy icon to copy the database URL.
+- In your workspace make sure django and gunicorn are installed by running `pip3 install 'django<4' gunicorn`.
+- Equally make sure that infrastructure for the database is installed by running `pip3 install dj_database_url===0.5.0 psycopg2`.
+- Update the `requirements.txt` file if needed.
+
+**The env.py file**
+
+- If you do not have a `env.py` file in your workspace create one and make sure it is included in the `.gitignore` file.
+- At the top of the `env.py` file add the line: `import os`.
+- Below that add the following two lines:
+
+  `os.environ["DATABASE_URL"] = "<copied URL from SQL database>"` <br>
+  `os.environ["SECRET_KEY"] = "<create a secret key of your own>"` <br>
+
+- If you are using Cloudinary storage also add the following line: <br>
+
+  `os.environ["CLOUDINARY_URL"] = "<copied URL from Cloudinary account>"`<br>
+
+- Make sure the environment variables are imported correctly into the `settings.py` file.
+- Run `python manage.py migrate` in the terminal window to migrate the data structure to the database instance.
+
+**Setting Environment Variables**
+
+- On the Heroku Dashboard select the app you just created and then select the "Settings" tab.
+- Click "Reveal Config Vars"
+- Add the following config vars: <br>
+
+  `DATABASE_URL` - copy the database URL from ElephantSQL in here, it should also be in the `env.py` file. <br>
+  `SECRET_KEY` - copy your secret key in here. <br>
+
+- If you are using Cloudinary storage you also need to copy your personal `CLOUDINARY_URL` into these fields. <br>
+- In addition, you may need the key `PORT` with value `8000`.
+
+**Connecting to GitHub and Deploy**
+
+- On the Heroku Dashboard select the app you just created and then select the "Deploy" tab.
+- Select GitHub for the deployment method.
+- Search for the name of the project repository and click "Connect".
+- Further down the page, select "Enable Automatic Deploys" if desired.
+- Then finally further down, select "Deploy Branch" and watch the app being built.
+
+### Forking the Repository
+
+- Log in to GitHub and locate the GitHub repository you want to fork.
+- At the top of the Repository above the "Settings" Tab on the menu, locate the "Fork" Button and click it.
+- You will have a copy of the original repository in your GitHub account.
+- You will now be able to make changes to the new version and keep the original safe.
+
+### Making a Local Clone
+
+- Log into GitHub and locate the repository you want to clone.
+- Click the 'Code' dropdown above the file list.
+- Copy the URL for the repository.
+- Open Git Bash in your IDE.
+- Change the current working directory to the location where you want the cloned directory.
+- Type `git clone` in the CLI and then paste the URL you copied earlier. This is what it should look like:
+  `$ git clone https://github.com/`
+- Press Enter to create your local clone.
+
+You will need to install all of the packages listed in the requirements file you can use the following command in the terminal `pip install -r requirements.txt` which will do it for you.
+
+
+## Credits
+
+### Media
+
+All images are taken from unsplash.com
+- https://unsplash.com/photos/wpi3sDUrSEk
+
+- https://unsplash.com/photos/G1iYCeCW2EI
+
+- https://unsplash.com/photos/ZI2Lv7jxmEM
+
+- https://unsplash.com/photos/6qThS1x6P6A
+
+- https://unsplash.com/photos/AjcVTjCz310
+
+- https://unsplash.com/photos/57USw1-h50k
+
+- https://unsplash.com/photos/jgPcjw2tBVc
+
+
+### Code
+
+Resources and inspiration came from a few sources:
 
 
 
