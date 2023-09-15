@@ -652,7 +652,6 @@ https://www.valentinog.com/blog/get-context-data/
 - class based views - dennis ivy
 https://www.dennisivy.com/django-class-based-views
 
-
 - Django for beginners (A fantastic book)
 https://djangoforbeginners.com/
 
@@ -700,7 +699,9 @@ https://django-allauth.readthedocs.io/en/latest/
 
 I would like to thank:
 
-- As always, many many thanks to my better half Jenny and the kids Rose and Ollie for their ongoing patience while I worked on this project and disappeared for weeks.
+- As always, many many thanks to my better half Jenny and my kids Rose and Ollie for their ongoing patience while I worked on this project and disappeared for weeks.
+- To my fatihful dog Ziggy, who helps me get out the door on many a walk, decompressing and figuring problems out while away from the coalface.
+- My colleagues Claire and William, who took time to test and send on feedback, likewise my good friend Twist, who may not be an Optom or a DO but help provide valueable feedback aswell
 -  I would like to thank my mentor [Jubril Akolade](https://github.com/Jubrillionaire) whos support and patience helped guide me through this project.
 - My fellow students in no particular order [Paul Gleeson](https://github.com/Shaga-Matula), [Indrek Mannik](https://github.com/Inc21), [Lornavav](https://github.com/Lornavav) (Not forgetting Brendan and Darragh too) for all the advice, support and picking apart the puzzles that coding presents. 
 - Cohort facilitator Paul Thomas O'Riordan, for their general advice and support through out this course. 

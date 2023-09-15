@@ -1,4 +1,4 @@
-
+/* inital css template taken from https://realpython.com/django-diary-project-python/ edited and added to further project aims*/
 
 * {
   box-sizing: border-box;
@@ -67,7 +67,7 @@ p {
 }
 
 .footer {
-  bottom: 20;
+  bottom: 20%;
   width: 100%;
 }
 

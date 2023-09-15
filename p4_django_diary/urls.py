@@ -25,3 +25,4 @@ urlpatterns = [
 handler404 = 'cpddiary.views.Custom_404'
 
 handler500 = 'cpddiary.views.Custom_500'
+

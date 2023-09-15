@@ -66,7 +66,7 @@ class DiaryCreateView(LoginRequiredMixin, UserPassesTestMixin,
 
     def test_func(self):
         return self.request.user.is_authenticated
-      
+
     def form_valid(self, form):
         form.instance.user = self.request.user
         return super(DiaryCreateView, self).form_valid(form)
