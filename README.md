@@ -584,6 +584,7 @@ Resources and inspiration came from a few sources:
   - <a href="https://realpython.com/django-diary-project-python/">Real Python Diary App</a>
   - <a href="https://www.dennisivy.com/django-class-based-views">Dennis Ivy Class Based Views</a>
   - <a href="https://ordinarycoders.com/blog/article/django-user-register-login-logout">Login Logout How to</a>
+  - <a href="https://github.com/URiem/worldtravellog"> A fantastic readme from Uriem as a guide / deployment guide taken from this source </a>
   
   Throughout the project, the following helpful websites were often frequented for troubleshooting:
   - <a href="https://docs.djangoproject.com/en/4.2/">Django documentation</a>
