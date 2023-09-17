@@ -41,10 +41,9 @@
             </div>
             <input type="submit" value="Save" class="btn btn-outline-primary">
 </form>
-</div>
 {% if entry %}
 <a href="{% url 'entry-detail' entry.id %}" class="btn btn-outline-primary">Cancel</a>
-</div>
+
 {% else %}
 <a href="{% url 'entry-list' %}" class="btn btn-outline-primary">Cancel</a>
 <br>
