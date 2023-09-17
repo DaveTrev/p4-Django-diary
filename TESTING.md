@@ -105,7 +105,19 @@ The Python code was tested using the [CI Python Linter](https://pep8ci.herokuapp
 <img src="static/Media/validation/python/app/admin.png" width="60%">
 </details>
 
+**Python testing results of P4_django_diary Files:**
 
+<summary>asgi.py</summary>
+<img src="static/Media/validation/python/project/ASGI.png" width="60%">
+</details>
+<details>
+<summary>wsgi.py</summary>
+<img src="static/Media/validation/python/project/wsgi.png" width="60%">
+</details>
+<details>
+<summary>urls.py</summary>
+<img src="static/Media/validation/python/project/urls (1).png" width="60%">
+</details>
 
 
 
