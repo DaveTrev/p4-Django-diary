@@ -87,6 +87,10 @@ The [W3C Markup Validation Service](https://validator.w3.org/) was used to valid
 <img src="static/Media/validation/html/sign-up-valid.png" width="60%">
 </details>
 <details>
+<summary>Edit page</summary>
+<img src="static/Media/validation/html/edit-form-valid.png" width="60%">
+</details>
+<details>
 <summary>Logout page</summary>
 <img src="static/Media/validation/html/sign-out-valid.png" width="60%">
 </details>
