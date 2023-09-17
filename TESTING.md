@@ -1,3 +1,114 @@
+ Cpd Diary Testing
+
+:arrow_left: [Return to the README](README.md)
+
+## Table of Contents
+
+# Performance
+
+[Google Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) was used to test the performance of the website. 
+
+<details>
+
+<summary>Desktop</summary>
+
+- Home page
+
+  <img src="static/Media/lighthouse/desk-index.png" width="60%">
+
+- Entry List page
+
+  <img src="static/Media/lighthouse/desk-entry-list.png" width="60%">
+  
+  - Entry Detail page
+
+  <img src="static/Media/lighthouse/desk-entry-detail.png" width="60%">
+  
+  - Entry Post page
+
+  <img src="static/Media/lighthouse/desk-entry-post.png" width="60%">
+  
+  - About page
+
+  <img src="static/Media/lighthouse/desk-about-page.png" width="60%">
+
+</details>
+
+<details>
+<summary>Mobile</summary>
+
+- Home page
+
+  <img src="static/Media/lighthouse/mobile-index.png" width="60%">
+
+- Entry List page
+
+  <img src="static/Media/lighthouse/mobile-entry-list.png" width="60%">
+  
+  - Entry Detail page
+
+  <img src="static/Media/lighthouse/mobile-entry-detail.png" width="60%">
+  
+  - Entry Post page
+
+  <img src="static/Media/lighthouse/mobile-detail-post.png" width="60%">
+  
+  - About page
+
+  <img src="static/Media/lighthouse/mobile-about-page.png" width="60%">
+
+
+</details>
+
+## CSS Validation
+
+The [W3C Jigsaw CSS Validation Service](https://jigsaw.w3.org/css-validator/) was used to validate the CSS of the website.
+
+The testing of the `style.css` file resulted in the following outcome:
+
+<img src="static/Media/validation/cssvalid.png" width="50%">
+
+## JS Validation
+
+[JSHint](https://jshint.com/) was used to validate the JavaScript of the website, which consists only of one function at the end of the base.html files.
+
+<img src="static/Media/validation/jshint.png" width="80%">
+
+## Python Code Validation
+
+The Python code was tested using the [CI Python Linter](https://pep8ci.herokuapp.com/).
+
+**Python testing results for CPD Diary App:**
+
+<details>
+<summary>models.py</summary>
+<img src="static/Media/validation/python/app/models.png" width="60%">
+</details>
+<details>
+<summary>views.py</summary>
+<img src="static/Media/validation/python/app/views.png" width="60%">
+</details>
+<details>
+<summary>forms.py</summary>
+<img src="static/Media/validation/python/app/forms.png" width="60%">
+</details>
+<details>
+<summary>urls.py</summary>
+<img src="static/Media/validation/python/app/urls.png" width="60%">
+</details>
+<details>
+<summary>apps.py</summary>
+<img src="static/Media/validation/python/app/apps.png" width="60%">
+</details>
+<details>
+<summary>admin.py</summary>
+<img src="static/Media/validation/python/app/admin.png" width="60%">
+</details>
+
+
+
+
+
 bootstrap for mbile!
 TIMEBOX doesnt indicate measurement of time!! minutes or hours?
 CPD points box, adjust to whole numbers and halfs
