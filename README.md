@@ -473,7 +473,7 @@ The testing documentation can be found at [TESTING.md](TESTING.md)
 Before deployment on Heroku, two files need to be created and be up to date, a `requirements.txt` file and a `Procfile`.
 
 - The `requirements.txt` file is created by executing the following command in the terminal window: ` pip3 freeze --local > requirements.txt`. A file with all requirements will be created.
-- Then create a file named `Procfile` and insert the following code: `web: gunicorn worldtravels.wsgi`, with no empty lines after it.
+- Then create a file named `Procfile` and insert the following code: `web: gunicorn p4_django_diary.wsgi`, with no empty lines after it.
 - Then make sure to push these files to your repository.
 
 **Creating Heroku App**
@@ -601,6 +601,9 @@ For information on CPD points, I have taken directly from source, some text on t
 
 Below are links I have used, I am conscious to include all links, to avoid any unwarranted plagerism. This project was the toughest yet and I know ive pulled from alot of resources:
 
+- Framework for this readme and the section on deployment is taken form 
+https://github.com/URiem/worldtravellog
+
 - added all auth instead of from django.contrib.auth.views import LoginView
 https://django-allauth.readthedocs.io/en/latest/
 
@@ -700,7 +703,7 @@ https://django-allauth.readthedocs.io/en/latest/
 I would like to thank:
 
 - As always, many many thanks to my better half Jenny and my kids Rose and Ollie for their ongoing patience while I worked on this project and disappeared for weeks.
-- To my fatihful dog Ziggy, who helps me get out the door on many a walk, decompressing and figuring problems out while away from the coalface.
+- To my faithful dog Ziggy, who helps me get out the door on many a walk, decompressing and figuring problems out while away from the screen.
 - My colleagues Claire and William, who took time to test and send on feedback, likewise my good friend Twist, who may not be an Optom or a DO but help provide valueable feedback aswell
 -  I would like to thank my mentor [Jubril Akolade](https://github.com/Jubrillionaire) whos support and patience helped guide me through this project.
 - My fellow students in no particular order [Paul Gleeson](https://github.com/Shaga-Matula), [Indrek Mannik](https://github.com/Inc21), [Lornavav](https://github.com/Lornavav) (Not forgetting Brendan and Darragh too) for all the advice, support and picking apart the puzzles that coding presents. 
