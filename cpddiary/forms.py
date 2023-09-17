@@ -45,7 +45,7 @@ class EntryForm(forms.ModelForm):
                        'Enter details on the impact on your practice.'}),
             'timeSpent': forms.TextInput(
                 attrs={'class': 'form-control', 'required': True,
-                       'placeholder': 'e.g. 3 hours',  'rows': 1, 'cols': 2}),
+                       'placeholder': 'e.g. 3 hours'}),
             'cpdCredits': forms.NumberInput(
                 attrs={'class': 'form-control', 'required': True,
                        'placeholder': 'Enter CPD Credits Claimed'}
