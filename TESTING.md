@@ -198,5 +198,7 @@ bootstrap4/uni_form.html"
 On posting a diary entry time, I could not find a way to correctly localise the time displayed. I have removed this.
 In future updates, I plan to let the user input the date of their learning.
 
+### 5. Search Bar
+The search bar is working on entry list page, but on removing text from the search bar input the page does not refresh.
 
 :arrow_left: [Return to the README](README.md)
