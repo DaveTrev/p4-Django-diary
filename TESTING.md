@@ -60,6 +60,37 @@
 
 </details>
 
+# Code Validation
+
+## HTML Validation
+
+The [W3C Markup Validation Service](https://validator.w3.org/) was used to validate the HTML of the website.
+
+<details>
+<summary>Home page</summary>
+<img src="static/Media/validation/html/index-valid.png" width="60%">
+</details>
+<details>
+<summary>Entry List page</summary>
+<img src="static/Media/validation/html/entry-list-valid.png" width="60%">
+</details>
+<details>
+<summary>Entry Detail page</summary>
+<img src="static/Media/validation/html/entry-detail-valid.png" width="60%">
+</details>
+<details>
+<summary>Login page</summary>
+<img src="static/Media/validation/html/sign-in-valid.png" width="60%">
+</details>
+<details>
+<summary>Sign Up page</summary>
+<img src="static/Media/validation/html/sign-up-valid.png" width="60%">
+</details>
+<details>
+<summary>Logout page</summary>
+<img src="static/Media/validation/html/sign-out-valid.png" width="60%">
+</details>
+
 ## CSS Validation
 
 The [W3C Jigsaw CSS Validation Service](https://jigsaw.w3.org/css-validator/) was used to validate the CSS of the website.
@@ -120,6 +151,12 @@ The Python code was tested using the [CI Python Linter](https://pep8ci.herokuapp
 </details>
 
 
+# Browser Testing
+
+The application was tested on the following browsers and worked without issues:
+
+- Chrome
+- Firefox
 
 bootstrap for mbile!
 TIMEBOX doesnt indicate measurement of time!! minutes or hours?
