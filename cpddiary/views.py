@@ -20,14 +20,23 @@ from .forms import EntryForm
 
 
 class HomePageView(TemplateView):
+    """ 
+    Renders Homepage index.html
+    """
     template_name = "index.html"
 
 
 class AboutPageView(TemplateView):
+    """
+    Renders About Page about.html
+    """
     template_name = 'about.html'
 
 
 class DiaryListView(LoginRequiredMixin, ListView):
+    """
+    Displays all objects in the entry model created by the user
+    """
     model = Entry
     queryset = Entry.objects.all().order_by("-date")
     context_object_name = 'entries'
@@ -54,11 +63,17 @@ class DiaryListView(LoginRequiredMixin, ListView):
 
 
 class DiaryDetailView(LoginRequiredMixin, DetailView):
+    """
+    Displays the details entered relating to the particular entry
+    """
     model = Entry
 
 
 class DiaryCreateView(LoginRequiredMixin, UserPassesTestMixin,
                       SuccessMessageMixin, CreateView):
+    """
+    Allows authenticated users to create entries
+    """
     model = Entry
     form_class = EntryForm
     success_url = reverse_lazy("entry-list")
@@ -73,6 +88,9 @@ class DiaryCreateView(LoginRequiredMixin, UserPassesTestMixin,
 
 
 class DiaryUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
+    """
+    Allows authenticated users to edit entries
+    """
     model = Entry
     form_class = EntryForm
     success_message = "Your new CPD diary entry was updated!"
@@ -84,6 +102,9 @@ class DiaryUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
 
 
 class DiaryDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+    """
+    Allows authenticated users to delete entries
+    """
     model = Entry
     success_url = reverse_lazy("entry-list")
     success_message = "Your diary entry was deleted!"
@@ -101,8 +122,14 @@ class DiaryDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 
 
 def Custom_404(request, exception):
+    """
+    Renders 404 page
+    """
     return render(request, '404.html', {})
 
 
 def Custom_500(request):
+    """
+    Renders 500 page
+    """
     return render(request, '500.html', {})

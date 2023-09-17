@@ -3,7 +3,7 @@
 {% load static %}
 
 {% block content %}
-<button class="btn btn-outline-primary"><a href="{% url 'entry-list' %}">Go Back</a></button>
+<a href="{% url 'entry-list' %}" class="btn btn-outline-primary">Go Back</a>
 <!-- Bootstrap form goes here! -->
     <form method="post">{% csrf_token %}
         <p>
@@ -11,9 +11,9 @@
             <em>"{{ entry.title }}"</em>
             created on {{ entry.date_created|date:'Y-m-d' }}?
         </p>
-        <input type="submit" value="Confirm">
+        <input type="submit" value="Confirm" class="btn btn-outline-danger">
     </form>
-    <a href="{% url 'entry-detail' entry.id %}">
-        <button>Cancel</button>
+    <a href="{% url 'entry-detail' entry.id %}" class="btn btn-outline-success">
+        Cancel
     </a>
 {% endblock %}

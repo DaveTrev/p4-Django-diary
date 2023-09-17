@@ -4,8 +4,8 @@
 
 {% block content %}
 <h3>Cpd Entry</h3>
-<button class="btn btn-outline-primary"><a href="{% url 'entry-list' %}">Go Back</a></button>
-<form method="POST" action="">
+<a href="{% url 'entry-list' %}" class="btn btn-outline-primary">Go Back</a>
+<form method="POST" action="{% url 'entry-list' %}">
     {% csrf_token %}
          <!--https://getbootstrap.com/docs/4.0/components/forms/-->
          <div class ="form-group">
@@ -39,17 +39,13 @@
                 {{ form.practiceImpact }}
                 {{ form.practiceImpact.errors }}
             </div>
-            <input type="submit" value="Save">
+            <input type="submit" value="Save" class="btn btn-outline-primary">
 </form>
 </div>
 {% if entry %}
-<a href="{% url 'entry-detail' entry.id %}">
-    <button>Cancel</button>
-</a>
+<a href="{% url 'entry-detail' entry.id %}" class="btn btn-outline-primary">Cancel</a>
 {% else %}
-<a href="{% url 'entry-list' %}">
-    <button>Cancel</button>
-</a>
+<a href="{% url 'entry-list' %}" class="btn btn-outline-primary">Cancel</a>
 <br>
 <br>
 {% endif %}
