@@ -13,6 +13,7 @@ body {
   margin-bottom: 4rem;
 }
 
+
 main {
   flex: 1;
 }
@@ -42,6 +43,7 @@ h3 {
 #intro {
   color: #084298;
 }
+
 
 .datefield {
   background-color: #dcdcdc;
