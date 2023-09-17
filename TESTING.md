@@ -150,7 +150,8 @@ The Python code was tested using the [CI Python Linter](https://pep8ci.herokuapp
 <img src="static/Media/validation/python/project/urls (1).png" width="60%">
 </details>
 
-
+## Manual Testing
+<img src="static/Media/Manual/cpd_diary_testing.jpg" width="100%">
 # Browser Testing
 
 The application was tested on the following browsers and worked without issues:
