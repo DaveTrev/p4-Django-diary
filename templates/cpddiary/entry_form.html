@@ -5,7 +5,7 @@
 {% block content %}
 <h3>Cpd Entry</h3>
 <a href="{% url 'entry-list' %}" class="btn btn-outline-primary">Go Back</a>
-<form method="POST" action="{% url 'entry-update' pk=entry.id %}">
+<form method="POST">
     {% csrf_token %}
          <!--https://getbootstrap.com/docs/4.0/components/forms/-->
          <div class ="form-group">
