@@ -4,10 +4,13 @@ from django.utils import timezone
 from django.core.exceptions import ValidationError
 from django.core.validators import MinValueValidator
 
+# ensures validation of only positive numbers
+# issues in removing this function to solely use minvaluevalidator
+
 
 def validate_positive_decimal(value):
     if value < 0.5:
-        raise ValidationError("Value must be greater than or equal to 0.5")
+        raise ValidationError("Cpd Credit must be greater than or = to 0.5")
 
 # change validators to min value 0.5 explain on form
 # database throwing error when removing function
